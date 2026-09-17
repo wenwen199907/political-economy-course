@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-deck-id="political-economy-lesson-2" data-mobile-adaptation="desktop-default" data-template-edit-mode="slots">
+<html lang="zh-CN" data-deck-id="political-economy-intro-object-law-method-v1" data-mobile-adaptation="desktop-default" data-template-edit-mode="slots">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>政治经济学·第二讲：生产为什么是出发点？</title>
+  <title>政治经济学·研究对象、性质、任务和研究方法</title>
   <style>
     /* === viewport-base.css (full) === */
     /* ===========================================
@@ -882,9 +882,242 @@ h3 { font-size:clamp(1.08rem,1.55vw,1.9rem); line-height:1.2; font-weight:850; }
   .deck-left-hover-anchor,.slide-sidebar,.nav-dots,.progress-bar,.deck-laser-layer { display:none !important; }
 }
 
-  </style>
+  
+/* === FUSED LECTURE 02: LARGE-TYPE TEACHING SYSTEM === */
+body.fused-deck {
+  --f-title: clamp(3rem, 4.25vw, 5.15rem);
+  --f-h2: clamp(2.62rem, 3.45vw, 4.3rem);
+  --f-h3: clamp(1.8rem, 2.15vw, 2.45rem);
+  --f-body: clamp(1.75rem, 1.72vw, 2.05rem);
+  --f-compact: clamp(1.68rem, 1.65vw, 1.9rem);
+  --f-note: clamp(1.18rem, 1.12vw, 1.36rem);
+}
+body.fused-deck .slide-content {
+  padding: clamp(1.25rem, 2.7vh, 2.6rem) clamp(2.6rem, 5.2vw, 6.5rem) clamp(1.1rem, 2.25vh, 2rem);
+}
+body.fused-deck .topline { margin-bottom: clamp(.45rem, 1vh, .85rem); }
+body.fused-deck .lesson-tag,
+body.fused-deck .source-tag,
+body.fused-deck .deck-footer { font-size: var(--f-note); }
+body.fused-deck .lesson-tag { letter-spacing: .08em; }
+body.fused-deck .stage { gap: clamp(.55rem, 1.25vh, 1.05rem); }
+body.fused-deck h1 { font-size: var(--f-title); max-width: 19ch; line-height: 1.02; }
+body.fused-deck h2 { font-size: var(--f-h2); max-width: 31ch; line-height: 1.08; }
+body.fused-deck h3 { font-size: var(--f-h3); line-height: 1.18; }
+body.fused-deck p,
+body.fused-deck li,
+body.fused-deck .body,
+body.fused-deck .lead { font-size: var(--f-body); line-height: 1.42; }
+body.fused-deck .small,
+body.fused-deck .compact { font-size: var(--f-compact); line-height: 1.4; }
+body.fused-deck .micro-note,
+body.fused-deck .source-ref { font-size: var(--f-note); line-height: 1.35; }
+body.fused-deck .kicker { font-size: clamp(1.18rem, 1.16vw, 1.4rem); letter-spacing: .08em; }
+body.fused-deck .definition-box { padding: clamp(.75rem, 1.2vw, 1.3rem); }
+body.fused-deck .definition-box p { font-size: clamp(1.72rem, 1.75vw, 2.08rem); line-height: 1.42; }
+body.fused-deck .definition-label { font-size: clamp(1.05rem, 1vw, 1.25rem); }
+body.fused-deck .focus-strip { font-size: var(--f-compact); line-height: 1.42; }
+body.fused-deck .panel { padding: clamp(.72rem, 1.25vw, 1.3rem); }
+body.fused-deck .panel p,
+body.fused-deck .panel li { font-size: var(--f-compact); }
+body.fused-deck .panel ul { margin-top: .55rem; }
+
+/* === FLAT COMPOSITION PRIMITIVES === */
+.question-spine { display:grid; grid-template-columns:repeat(3,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.question-spine > div { padding:clamp(1rem,1.7vw,1.9rem); min-height:31vh; display:flex; flex-direction:column; justify-content:space-between; gap:.7rem; }
+.question-spine > div + div { border-left:2px solid currentColor; }
+.question-spine .qnum { color:var(--red); font-size:clamp(2.8rem,4.2vw,5.2rem); font-weight:900; line-height:1; }
+.question-spine p { font-size:var(--f-compact) !important; }
+
+.logic-chain { display:flex; align-items:stretch; gap:clamp(.35rem,.7vw,.75rem); }
+.logic-chain .logic-step { flex:1; border-top:5px solid currentColor; padding:clamp(.65rem,1vw,1rem) .25rem; min-width:0; }
+.logic-chain .logic-step strong { display:block; font-size:var(--f-h3); line-height:1.16; }
+.logic-chain .logic-step span { display:block; margin-top:.5rem; font-size:var(--f-compact); line-height:1.35; }
+.logic-chain .logic-arrow { align-self:center; color:var(--red); font-size:clamp(1.8rem,2.3vw,2.8rem); font-weight:900; }
+
+.duality { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.duality .side { padding:clamp(1rem,1.8vw,2rem); }
+.duality .side p { font-size:var(--f-compact); }
+.duality .pivot { width:clamp(4.5rem,7vw,8rem); display:grid; place-items:center; border-left:2px solid currentColor; border-right:2px solid currentColor; color:var(--red); font-size:clamp(2.1rem,2.8vw,3.4rem); font-weight:900; writing-mode:vertical-rl; letter-spacing:.1em; }
+
+.concept-ledger { display:grid; grid-template-columns:minmax(13rem,.72fr) 1fr; border-top:3px solid currentColor; }
+.concept-ledger > div { padding:clamp(.7rem,1.1vw,1.15rem); border-bottom:2px solid currentColor; }
+.concept-ledger > div:nth-child(odd) { font-size:var(--f-h3); font-weight:900; color:var(--red); }
+.concept-ledger > div:nth-child(even) { font-size:var(--f-compact); line-height:1.42; }
+
+.equation-board { display:grid; grid-template-columns:1fr auto 1fr auto 1.15fr; align-items:center; border:3px solid currentColor; }
+.equation-board > div { padding:clamp(.9rem,1.5vw,1.5rem); text-align:center; }
+.equation-board strong { display:block; font-size:var(--f-h3); }
+.equation-board span { display:block; margin-top:.45rem; font-size:var(--f-compact); line-height:1.35; }
+.equation-board .operator { color:var(--red); font-size:clamp(2.2rem,3vw,3.6rem); font-weight:900; padding:.2rem; }
+
+.four-process { display:grid; grid-template-columns:repeat(4,1fr); border:3px solid currentColor; }
+.four-process > div { padding:clamp(.75rem,1.15vw,1.2rem); min-height:26vh; }
+.four-process > div + div { border-left:2px solid currentColor; }
+.four-process strong { display:block; font-size:var(--f-h3); }
+.four-process span { display:block; margin-top:.55rem; font-size:var(--f-compact); line-height:1.35; }
+.four-process .dominant { background:var(--red); color:#fff; }
+
+.relation-sheet { display:grid; grid-template-columns:1fr 1fr; gap:clamp(.8rem,1.4vw,1.5rem); }
+.relation-sheet > section { border-top:7px solid var(--ink); padding:clamp(.75rem,1.2vw,1.25rem) 0; }
+.relation-sheet > section.redline { border-color:var(--red); }
+.relation-sheet p { font-size:var(--f-compact) !important; }
+.relation-sheet .judgment { margin-top:.65rem; padding:.65rem .8rem; background:rgba(213,45,35,.08); font-weight:800; }
+
+.summary-ledger { display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:3px solid currentColor; }
+.summary-ledger > div { padding:clamp(.8rem,1.35vw,1.35rem); min-height:17vh; }
+.summary-ledger > div:nth-child(even) { border-left:2px solid currentColor; }
+.summary-ledger > div:nth-child(n+3) { border-top:2px solid currentColor; }
+.summary-ledger strong { display:block; font-size:var(--f-h3); color:var(--red); }
+.summary-ledger span { display:block; margin-top:.45rem; font-size:var(--f-compact); line-height:1.35; }
+
+.dialectic-map { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center; }
+.dialectic-map .block { border:3px solid currentColor; min-height:25vh; padding:clamp(.8rem,1.4vw,1.5rem); display:flex; flex-direction:column; justify-content:center; }
+.dialectic-map .block strong { font-size:var(--f-h3); }
+.dialectic-map .block span { margin-top:.5rem; font-size:var(--f-compact); line-height:1.35; }
+.dialectic-map .double { color:var(--red); font-size:clamp(2rem,2.6vw,3.3rem); padding:0 .55rem; font-weight:900; }
+
+.comparison-table { display:grid; grid-template-columns:.6fr 1fr 1fr; border-top:3px solid currentColor; border-left:3px solid currentColor; }
+.comparison-table > div { padding:clamp(.55rem,.9vw,.95rem); border-right:2px solid currentColor; border-bottom:2px solid currentColor; font-size:var(--f-compact); line-height:1.32; }
+.comparison-table .head { background:var(--ink); color:#fff; font-weight:900; }
+.comparison-table .row { font-weight:900; color:var(--red); }
+
+.case-flow { display:grid; grid-template-columns:repeat(5,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.case-flow > div { padding:clamp(.75rem,1vw,1.05rem); min-height:22vh; }
+.case-flow > div + div { border-left:2px solid currentColor; }
+.case-flow strong { display:block; font-size:clamp(1.55rem,1.75vw,2rem); }
+.case-flow span { display:block; margin-top:.5rem; font-size:clamp(1.32rem,1.28vw,1.55rem); line-height:1.35; }
+.case-flow .algorithm { background:var(--ink); color:#fff; }
+
+.case-questions { counter-reset:item; display:grid; grid-template-columns:1fr 1fr; border:3px solid currentColor; }
+.case-questions > div { position:relative; padding:clamp(.8rem,1.25vw,1.3rem) clamp(.8rem,1.25vw,1.3rem) clamp(.8rem,1.25vw,1.3rem) clamp(3.7rem,4.2vw,5rem); min-height:18vh; font-size:var(--f-compact); line-height:1.38; }
+.case-questions > div:nth-child(even) { border-left:2px solid currentColor; }
+.case-questions > div:nth-child(n+3) { border-top:2px solid currentColor; }
+.case-questions > div::before { counter-increment:item; content:counter(item); position:absolute; left:1rem; top:.65rem; color:var(--red); font-size:clamp(2rem,2.5vw,3rem); font-weight:900; }
+
+.law-card { border-left:clamp(10px,.8vw,15px) solid var(--red); padding:clamp(.8rem,1.3vw,1.4rem); background:rgba(255,255,255,.58); }
+.law-card .law-definition { font-size:clamp(2rem,2.25vw,2.7rem); line-height:1.38; font-weight:800; }
+.law-traits { display:grid; grid-template-columns:repeat(3,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.law-traits > div { padding:clamp(.65rem,1vw,1rem); }
+.law-traits > div + div { border-left:2px solid currentColor; }
+.law-traits strong { display:block; font-size:var(--f-h3); color:var(--red); }
+.law-traits span { display:block; margin-top:.35rem; font-size:var(--f-compact); line-height:1.32; }
+
+.method-stack { display:grid; grid-template-columns:1.1fr 1fr 1fr 1fr; border:3px solid currentColor; }
+.method-stack > div { padding:clamp(.75rem,1.1vw,1.15rem); min-height:28vh; }
+.method-stack > div + div { border-left:2px solid currentColor; }
+.method-stack strong { display:block; font-size:clamp(1.65rem,1.82vw,2.1rem); }
+.method-stack span { display:block; margin-top:.55rem; font-size:clamp(1.35rem,1.3vw,1.58rem); line-height:1.35; }
+.method-stack .root { background:var(--ink); color:#fff; }
+
+.framework-map { display:grid; grid-template-columns:repeat(7,1fr); align-items:stretch; border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.framework-map > div { padding:clamp(.55rem,.75vw,.8rem); min-height:30vh; display:flex; flex-direction:column; justify-content:center; }
+.framework-map > div + div { border-left:2px solid currentColor; }
+.framework-map strong { font-size:clamp(1.35rem,1.55vw,1.82rem); line-height:1.18; }
+.framework-map span { margin-top:.4rem; font-size:clamp(1.05rem,1.02vw,1.25rem); line-height:1.3; }
+.framework-map .em { background:var(--red); color:#fff; }
+
+.conclusions { display:grid; grid-template-columns:1fr 1fr; border-top:3px solid currentColor; }
+.conclusions > div { display:grid; grid-template-columns:3rem 1fr; gap:.65rem; padding:clamp(.55rem,.9vw,.9rem) .25rem; border-bottom:2px solid currentColor; }
+.conclusions > div:nth-child(even) { border-left:2px solid currentColor; padding-left:1rem; }
+.conclusions b { color:var(--red); font-size:clamp(1.55rem,1.7vw,2rem); }
+.conclusions span { font-size:clamp(1.72rem,1.72vw,2rem); line-height:1.35; }
+
+.homework { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.2rem,2vw,2.2rem); }
+.homework article { border-top:8px solid var(--red); padding:clamp(1rem,1.5vw,1.55rem) 0; min-height:34vh; }
+.homework .q { font-size:clamp(2rem,2.35vw,2.8rem); line-height:1.35; font-weight:900; }
+.homework .hint { margin-top:1.1rem; font-size:var(--f-compact); line-height:1.4; color:var(--muted); }
+
+@media (max-height: 760px) {
+  body.fused-deck .slide-content { padding-top:.9rem; padding-bottom:.7rem; }
+  body.fused-deck .topline { margin-bottom:.25rem; }
+  body.fused-deck .stage { gap:.45rem; }
+  body.fused-deck .deck-footer { padding-top:.25rem; }
+}
+@media (max-width: 1100px) {
+  .question-spine,.four-process,.method-stack { grid-template-columns:1fr 1fr; }
+  .question-spine > div + div,.four-process > div + div,.method-stack > div + div { border-left:0; }
+  .question-spine > div:nth-child(even),.four-process > div:nth-child(even),.method-stack > div:nth-child(even) { border-left:2px solid currentColor; }
+  .question-spine > div:nth-child(n+3),.four-process > div:nth-child(n+3),.method-stack > div:nth-child(n+3) { border-top:2px solid currentColor; }
+  .framework-map { grid-template-columns:repeat(4,1fr); }
+}
+@media (max-width: 600px) {
+  body.fused-deck { --f-title:clamp(1.8rem,8vw,2.35rem); --f-h2:clamp(1.55rem,6.7vw,2rem); --f-h3:clamp(1.08rem,4.6vw,1.35rem); --f-body:clamp(.92rem,3.8vw,1.08rem); --f-compact:clamp(.78rem,3.25vw,.94rem); --f-note:clamp(.68rem,2.8vw,.82rem); }
+  body.fused-deck .slide-content { padding:.8rem .9rem; }
+  body.fused-deck .topline,body.fused-deck .deck-footer { display:none; }
+  body.fused-deck .stage { gap:.4rem; }
+  body.fused-deck .kicker { font-size:.72rem; }
+  .question-spine { grid-template-columns:repeat(3,1fr); }
+  .question-spine > div { min-height:0; padding:.55rem; }
+  .question-spine > div:nth-child(n+3) { border-top:0; }
+  .question-spine .qnum { font-size:1.65rem; }
+  .logic-chain { display:grid; grid-template-columns:1fr 1fr; gap:.4rem; }
+  .logic-chain .logic-arrow { display:none; }
+  .logic-chain .logic-step { padding:.45rem; border:1px solid currentColor; border-top:4px solid currentColor; }
+  .duality .side { padding:.55rem; }
+  .duality .pivot { width:2.5rem; font-size:1.1rem; }
+  .concept-ledger { grid-template-columns:7.5rem 1fr; }
+  .concept-ledger > div { padding:.38rem; }
+  .equation-board > div { padding:.45rem; }
+  .equation-board .operator { font-size:1.25rem; }
+  .four-process { grid-template-columns:repeat(4,1fr); }
+  .four-process > div { min-height:0; padding:.45rem; }
+  .four-process > div:nth-child(n+3) { border-top:0; }
+  .relation-sheet { gap:.55rem; }
+  .relation-sheet > section { padding:.4rem 0; }
+  .summary-ledger > div { min-height:0; padding:.5rem; }
+  .dialectic-map .block { min-height:0; padding:.5rem; }
+  .dialectic-map .double { font-size:1.2rem; padding:0 .2rem; }
+  .comparison-table > div { padding:.34rem; }
+  .case-flow > div { min-height:0; padding:.38rem; }
+  .case-flow strong { font-size:1rem; }
+  .case-flow span { font-size:.72rem; }
+  .case-questions > div { min-height:0; padding:.5rem .45rem .5rem 2rem; }
+  .case-questions > div::before { left:.55rem; top:.35rem; font-size:1.25rem; }
+  .law-card { padding:.55rem; }
+  .law-card .law-definition { font-size:1.25rem; }
+  .law-traits > div { padding:.4rem; }
+  .method-stack { grid-template-columns:repeat(4,1fr); }
+  .method-stack > div { min-height:0; padding:.42rem; }
+  .method-stack > div:nth-child(n+3) { border-top:0; }
+  .method-stack strong { font-size:1rem; }
+  .method-stack span { font-size:.72rem; }
+  .framework-map { grid-template-columns:repeat(7,1fr); }
+  .framework-map > div { min-height:0; padding:.3rem; }
+  .framework-map strong { font-size:.8rem; }
+  .framework-map span { font-size:.62rem; }
+  .conclusions > div { grid-template-columns:1.6rem 1fr; padding:.34rem; gap:.25rem; }
+  .conclusions b { font-size:.92rem; }
+  .conclusions span { font-size:.73rem; }
+  .homework { gap:.65rem; }
+  .homework article { min-height:0; padding:.55rem 0; }
+  .homework .q { font-size:1.25rem; }
+  .homework .hint { margin-top:.55rem; }
+}
+@media (max-height: 500px) {
+  body.fused-deck { --f-title:clamp(1.7rem,4.8vw,2.4rem); --f-h2:clamp(1.45rem,3.7vw,2rem); --f-h3:clamp(1rem,2.35vw,1.35rem); --f-body:clamp(.84rem,1.75vw,1.02rem); --f-compact:clamp(.72rem,1.45vw,.9rem); --f-note:clamp(.62rem,1.15vw,.75rem); }
+  body.fused-deck .slide-content { padding:.5rem 1.5rem; }
+  body.fused-deck .topline,body.fused-deck .deck-footer { display:none; }
+  body.fused-deck .stage { gap:.3rem; }
+  body.fused-deck .kicker { font-size:.65rem; }
+  .question-spine > div,.four-process > div,.method-stack > div { min-height:0; padding:.35rem; }
+  .duality .side,.relation-sheet > section,.summary-ledger > div,.dialectic-map .block { padding:.35rem; min-height:0; }
+  .case-flow > div { min-height:0; padding:.3rem; }
+  .case-flow strong { font-size:.92rem; }
+  .case-flow span { font-size:.64rem; }
+  .case-questions > div { min-height:0; padding:.35rem .35rem .35rem 1.8rem; }
+  .method-stack strong { font-size:.92rem; }
+  .method-stack span { font-size:.66rem; }
+  .framework-map > div { min-height:0; padding:.25rem; }
+  .homework article { min-height:0; padding:.4rem 0; }
+  .conclusions > div { grid-template-columns:1.25rem 1fr; gap:.15rem; padding:.18rem .2rem; }
+  .conclusions b { font-size:.72rem; }
+  .conclusions span { font-size:.62rem; line-height:1.18; }
+}
+
+</style>
 </head>
-<body>
+<body class="fused-deck">
 
 <div class="deck-left-hover-anchor" id="deckLeftHover" aria-label="Deck controls">
   <div class="deck-left-row">
@@ -977,274 +1210,653 @@ h3 { font-size:clamp(1.08rem,1.55vw,1.9rem); line-height:1.2; font-weight:850; }
 </div>
 
 <div class="slides-offset">
-<section class="slide tone-dark" id="slide-0" data-slide-title="生产为什么是出发点">
+<section class="slide tone-dark" id="slide-0" data-slide-title="马克思主义政治经济学研究什么、为什么这样研究、怎样研究" data-teach-minutes="0.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s0-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s0-source">导论第二节｜研究对象</span>
+      <span class="lesson-tag" data-edit-slot="s0-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s0-source">导论第二节、第三节</span>
     </header>
     <main class="stage">
-      <div class="hero-row">
-        <div class="reveal"><div class="kicker">同一杯咖啡 · 镜头向后</div><h1 data-edit-slot="s0-title">它不是从<br><span class="accent">杯子</span>开始的</h1><p class="lead" data-edit-slot="s0-lead">在被购买之前，它已经经历劳动、自然、技术和一整套社会关系。</p></div>
-        <div class="coffee-scene reveal"><div class="orbit"></div><div class="steam s1"></div><div class="steam s2"></div><div class="cup"></div><span class="orbit-label ol1">土地与咖啡豆</span><span class="orbit-label ol2">机器与门店</span><span class="orbit-label ol3">劳动与协作</span><span class="orbit-label ol4">知识与技术</span></div>
-      </div></main>
-    <footer class="deck-footer"><span data-edit-slot="s0-footer">政治经济学 · 导论</span><span class="page-no">01 / 16</span></footer>
+          <div class="hero-row">
+            <div class="reveal">
+              <div class="kicker" data-edit-slot="s0-k">一条连续的问题链</div>
+              <h1 data-edit-slot="s0-title">研究什么<br><span class="accent">为什么、怎样研究</span></h1>
+              <p class="lead" data-edit-slot="s0-lead">从物质资料生产进入生产关系，再由经济现象追问内在规律与研究方法。</p>
+            </div>
+            <div class="dialectic-map reveal" style="grid-template-columns:1fr auto 1fr">
+              <div class="block"><strong>现实生产</strong><span>生产力、生产关系、社会再生产</span></div>
+              <div class="double">⇄</div>
+              <div class="block"><strong>理论认识</strong><span>性质、任务、经济规律、研究方法</span></div>
+            </div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s0-footer">政治经济学 · 导论</span><span class="page-no">01 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-1" data-slide-title="从订单向后还原生产链">
+<section class="slide" id="slide-1" data-slide-title="本单元的三个核心问题" data-teach-minutes="1.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s1-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s1-source">贯穿案例｜生产链示意</span>
+      <span class="lesson-tag" data-edit-slot="s1-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s1-source">一条连续的问题链</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">REVERSE THE RECEIPT</div><h2 class="reveal" data-edit-slot="s1-title">从“已完成订单”向后，还原一条生产链</h2>
-      <div class="flow reveal">
-        <div class="node"><h3>种植</h3><p class="small">土地、劳动、自然条件</p></div><div class="arrow">→</div>
-        <div class="node fragment"><h3>加工</h3><p class="small">设备、能源、技术</p></div><div class="arrow fragment">→</div>
-        <div class="node fragment"><h3>门店</h3><p class="small">组织、服务、品牌</p></div><div class="arrow fragment">→</div>
-        <div class="node fragment" style="border-color:var(--red)"><h3>交付与消费</h3><p class="small">平台、配送、需求</p></div>
-      </div>
-      <p class="lead fragment" data-edit-slot="s1-call">消费端看到的是终点；政治经济学把它重新接回<span class="accent">社会生产过程</span>。</p></main>
-    <footer class="deck-footer"><span data-edit-slot="s1-footer">政治经济学 · 导论</span><span class="page-no">02 / 16</span></footer>
+          <h2 class="reveal" data-edit-slot="s1-title">同一门科学，要回答三个相互连接的问题</h2>
+          <div class="question-spine reveal">
+            <div><span class="qnum">01</span><h3>研究什么</h3><p>生产关系为什么成为专门研究对象？研究它为何必须联系生产力和上层建筑？</p></div>
+            <div class="fragment"><span class="qnum">02</span><h3>为什么这样研究</h3><p>经济现象背后为什么存在客观规律？科学性与阶级性怎样统一？</p></div>
+            <div class="fragment"><span class="qnum">03</span><h3>怎样研究</h3><p>怎样从纷繁现象抽象出本质关系，再形成对现实整体的科学认识？</p></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s1-footer">政治经济学 · 导论</span><span class="page-no">02 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-red" id="slide-2" data-slide-title="课堂讨论：哪一环最基础">
+<section class="slide" id="slide-2" data-slide-title="物质资料生产是分析的出发点" data-teach-minutes="2">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s2-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s2-source">讨论 4 分钟</span>
+      <span class="lesson-tag" data-edit-slot="s2-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s2-source">教材P6—7 · 官方PPT第19页</span>
     </header>
     <main class="stage">
-      <div class="discussion reveal"><div class="clock">4′</div><div><div class="kicker">REMOVE ONE LINK</div><h2 data-edit-slot="s2-title">拿掉种植、平台、门店或消费者，哪一环最先让系统停下？</h2><div class="prompt-list" style="margin-top:1rem"><div>四组选一个环节，为“它最基础”辩护</div><div>另一组提出反例：它是否依赖其他环节？</div><div>最后区分“出发点”与“唯一重要”</div></div></div></div></main>
-    <footer class="deck-footer"><span data-edit-slot="s2-footer">政治经济学 · 导论</span><span class="page-no">03 / 16</span></footer>
+          <div class="kicker reveal">逻辑起点</div>
+          <h2 class="reveal" data-edit-slot="s2-title">人类必须首先生产维持生存与发展的物质资料</h2>
+          <div class="definition-box reveal"><span class="definition-label">核心判断</span><p data-edit-slot="s2-def"><b>物质资料生产</b>是人类社会存在和发展的基础，也是马克思主义政治经济学研究的出发点。</p><span class="source-ref">教材P6</span></div>
+          <div class="logic-chain fragment">
+            <div class="logic-step"><strong>生存需要</strong><span>吃、喝、住、穿</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>物质资料</strong><span>满足生活需要的产品</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>生产活动</strong><span>人类改造自然并形成社会联系</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step"><strong>社会生活</strong><span>政治、科学、艺术等由此获得物质基础</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s2-footer">政治经济学 · 导论</span><span class="page-no">03 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-3" data-slide-title="物质资料生产是起点">
+<section class="slide" id="slide-3" data-slide-title="同一生产过程包含两种关系" data-teach-minutes="2">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s3-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s3-source">教材第6页｜官方PPT 18—19</span>
+      <span class="lesson-tag" data-edit-slot="s3-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s3-source">教材P7 · 官方PPT第20页</span>
     </header>
     <main class="stage">
-      <div class="two-col">
-        <div class="reveal"><div class="kicker">教材定义</div><h2 data-edit-slot="s3-title">物质资料生产是人类社会存在和发展的基础</h2><div class="definition-box" style="margin-top:1rem"><span class="definition-label">出发点</span><p>马克思主义政治经济学从物质资料生产出发，考察社会经济关系及其运动。</p><span class="source-ref">教材第6页</span></div></div>
-        <div class="panel red reveal"><h3>“出发点”不等于“唯一对象”</h3><ul class="clean-list"><li data-edit-slot="s3-no1">不是只有物质活动值得研究</li><li data-edit-slot="s3-no2">不是文化、服务和数字活动不重要</li><li data-edit-slot="s3-no3">不是分配、交换、消费只是被动结果</li></ul><p class="body fragment"><b>准确表述：</b>复杂经济生活必须放回再生产生活条件的过程来理解。</p></div>
-      </div></main>
-    <footer class="deck-footer"><span data-edit-slot="s3-footer">政治经济学 · 导论</span><span class="page-no">04 / 16</span></footer>
+          <h2 class="reveal" data-edit-slot="s3-title">生产既是人与自然之间的物质变换，也是人与人之间的社会合作</h2>
+          <div class="duality reveal">
+            <div class="side"><div class="kicker">自然属性</div><h3 data-edit-slot="s3-a">生产力</h3><p>人类利用自然、改造自然并进行物质资料生产的能力，表现人与自然的关系。</p></div>
+            <div class="pivot">生产</div>
+            <div class="side fragment"><div class="kicker">社会属性</div><h3 data-edit-slot="s3-b">生产关系</h3><p>人们在生产过程中形成的相互关系，表现生产中人与人之间的社会联系。</p></div>
+          </div>
+          <p class="focus-strip fragment" data-edit-slot="s3-call"><b>关键判断：</b>生产力代表生产的物质内容，生产关系代表生产的社会形式，二者共同构成现实的社会生产过程。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s3-footer">政治经济学 · 导论</span><span class="page-no">04 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-4" data-slide-title="生产力：人与自然的现实能力">
+<section class="slide" id="slide-4" data-slide-title="生产力的规范定义" data-teach-minutes="2">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s4-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s4-source">教材第7页｜官方PPT 20</span>
+      <span class="lesson-tag" data-edit-slot="s4-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s4-source">教材P7 · 官方PPT第20页</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">不是“机器”的同义词</div><h2 class="reveal" data-edit-slot="s4-title">生产力 = 人们改造自然、取得物质资料的现实能力</h2>
-      <div class="three-col">
-        <div class="panel red reveal"><h3 data-edit-slot="s4-a">劳动者</h3><p class="body">知识、技能、经验与体力</p></div>
-        <div class="panel blue fragment"><h3 data-edit-slot="s4-b">劳动资料</h3><p class="body">工具、机器、基础设施</p></div>
-        <div class="panel gold fragment"><h3 data-edit-slot="s4-c">劳动对象</h3><p class="body">自然物与经过加工的材料</p></div>
-      </div>
-      <div class="focus-strip fragment" data-edit-slot="s4-call"><b>必须区分：</b>生产资料 = 劳动资料 + 劳动对象；生产的基本要素 = 劳动者 + 生产资料。劳动者在生产力诸要素中起支配作用。 <span class="source-ref">教材第7页</span></div></main>
-    <footer class="deck-footer"><span data-edit-slot="s4-footer">政治经济学 · 导论</span><span class="page-no">05 / 16</span></footer>
+          <div class="kicker reveal">核心概念</div>
+          <div class="law-card reveal"><div class="law-definition" data-edit-slot="s4-def">生产力是人类利用自然和改造自然、进行物质资料生产的能力。</div><div class="source-ref" style="margin-top:.7rem">教材P7</div></div>
+          <div class="relation-sheet fragment">
+            <section><h3>它回答</h3><p>人们凭借什么力量生产？生产的实际能力达到什么水平？</p></section>
+            <section class="redline"><h3>它表现</h3><p>劳动者、生产资料以及科学技术等因素结合后形成的现实生产能力。</p></section>
+          </div>
+          <p class="micro-note">易混淆：生产力不是单指机器，也不是单指劳动者个人的技能。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s4-footer">政治经济学 · 导论</span><span class="page-no">05 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-5" data-slide-title="技术如何进入生产力">
+<section class="slide" id="slide-5" data-slide-title="生产力的基本要素" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s5-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s5-source">教材第7页｜现实延伸</span>
+      <span class="lesson-tag" data-edit-slot="s5-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s5-source">教材P7</span>
     </header>
     <main class="stage">
-      <div class="hero-row">
-        <div class="reveal"><div class="kicker">以咖啡订单算法为例</div><h2 data-edit-slot="s5-title">技术不是悬浮的“第四个盒子”</h2><p class="lead">它改变设备效率、劳动技能、对象处理方式，也改变要素怎样组合。</p></div>
-        <div class="stair reveal"><div class="stepbox"><strong>数据</strong><span class="small">需求记录</span></div><div class="stepbox fragment"><strong>算法</strong><span class="small">预测与调度</span></div><div class="stepbox fragment"><strong>组织</strong><span class="small">排班与库存</span></div><div class="stepbox fragment"><strong>能力</strong><span class="small">更高产出</span></div></div>
-      </div>
-      <div class="definition-box fragment"><span class="definition-label">教材界定</span><p>科学技术只有运用于生产、体现为劳动者技能提高和生产资料创新改进时，才转化为现实生产力。</p><span class="source-ref">教材第7页</span></div></main>
-    <footer class="deck-footer"><span data-edit-slot="s5-footer">政治经济学 · 导论</span><span class="page-no">06 / 16</span></footer>
+          <div class="equation-board reveal">
+            <div><strong data-edit-slot="s5-a">劳动者</strong><span>生产过程的主体，劳动能力通过实际劳动发挥作用</span></div>
+            <div class="operator">＋</div>
+            <div><strong data-edit-slot="s5-b">劳动资料</strong><span>劳动的传导体，其中生产工具最能反映生产力水平</span></div>
+            <div class="operator">＋</div>
+            <div><strong data-edit-slot="s5-c">劳动对象</strong><span>人们借助劳动资料把劳动施加于其上的物质</span></div>
+          </div>
+          <div class="definition-box fragment"><span class="definition-label">概念关系</span><p data-edit-slot="s5-rel"><b>劳动资料＋劳动对象＝生产资料</b>；劳动者和生产资料是生产的基本要素。</p><span class="source-ref">教材P7</span></div>
+          <p class="micro-note">劳动资料与劳动对象都是生产力的物的因素，但二者在劳动过程中的功能不同。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s5-footer">政治经济学 · 导论</span><span class="page-no">06 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-6" data-slide-title="生产关系：生产中的社会结合">
+<section class="slide" id="slide-6" data-slide-title="科学技术、管理等因素如何进入生产力" data-teach-minutes="1.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s6-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s6-source">教材第7—8页｜官方PPT 21</span>
+      <span class="lesson-tag" data-edit-slot="s6-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s6-source">教材P7</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">人与人不是在生产之后才相遇</div><h2 class="reveal" data-edit-slot="s6-title">生产关系回答：人们以什么社会方式共同生产？</h2>
-      <div class="three-col">
-        <div class="panel red reveal"><div class="num">A</div><h3 data-edit-slot="s6-a">生产资料所有制</h3><p class="small">谁拥有、支配关键条件</p></div>
-        <div class="panel fragment"><div class="num">B</div><h3 data-edit-slot="s6-b">生产中的地位与关系</h3><p class="small">谁决策、谁执行、怎样协作</p></div>
-        <div class="panel fragment"><div class="num">C</div><h3 data-edit-slot="s6-c">产品分配关系</h3><p class="small">成果以何种规则归属各方</p></div>
-      </div>
-      <div class="focus-strip fragment"><b>研究对象：</b>马克思主义政治经济学研究生产关系，同时必须联系生产力和上层建筑；它研究的不是孤立的“物”，而是经济关系及其运动规律。 <span class="source-ref">教材第8页</span></div></main>
-    <footer class="deck-footer"><span data-edit-slot="s6-footer">政治经济学 · 导论</span><span class="page-no">07 / 16</span></footer>
+          <h2 class="reveal" data-edit-slot="s6-title">科学技术只有运用于生产，才转化为现实的生产力</h2>
+          <div class="logic-chain reveal">
+            <div class="logic-step"><strong>科学技术</strong><span>提高劳动者技能，推动生产工具与工艺创新</span></div>
+            <div class="logic-arrow">＋</div>
+            <div class="logic-step fragment"><strong>组织管理</strong><span>使各要素形成协同的生产过程，提高结合效率</span></div>
+            <div class="logic-arrow">＋</div>
+            <div class="logic-step fragment"><strong>知识、信息、数据</strong><span>在信息化条件下日益成为重要生产要素</span></div>
+          </div>
+          <p class="focus-strip fragment" data-edit-slot="s6-call"><b>重点理解：</b>技术不是脱离人的独立力量。它通过劳动者、劳动资料和生产组织进入现实生产过程。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s6-footer">政治经济学 · 导论</span><span class="page-no">07 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-7" data-slide-title="狭义与广义生产关系">
+<section class="slide" id="slide-7" data-slide-title="生产关系及其研究对象地位" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s7-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s7-source">教材第8页｜概念辨析</span>
+      <span class="lesson-tag" data-edit-slot="s7-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s7-source">教材P7—8 · 官方PPT第20—21页</span>
     </header>
     <main class="stage">
-      <div class="compare reveal">
-        <div><div class="cap">狭义生产关系</div><h2 data-edit-slot="s7-a">直接生产过程中的经济关系</h2><ul><li>主要是生产资料所有制关系</li><li>所有制深刻影响地位、协作与分配</li></ul></div>
-        <div><div class="cap">广义生产关系</div><h2 data-edit-slot="s7-b">再生产过程中的经济关系</h2><ul><li>生产、分配、交换、消费</li><li>四个环节形成的经济关系有机整体</li></ul></div>
-      </div>
-      <p class="focus-strip fragment" data-edit-slot="s7-q"><b>易混辨析：</b>两种口径不是互相否定，而是分析范围不同；作答时先说明采用狭义还是广义。 <span class="source-ref">教材第8页</span></p></main>
-    <footer class="deck-footer"><span data-edit-slot="s7-footer">政治经济学 · 导论</span><span class="page-no">08 / 16</span></footer>
+          <div class="definition-box reveal"><span class="definition-label">核心概念</span><p data-edit-slot="s7-def"><b>生产关系</b>是人们在生产过程中形成的相互关系。物质资料生产不是孤立的个人生产，而是在一定社会联系中进行的生产。</p><span class="source-ref">教材P7—8</span></div>
+          <div class="law-card fragment"><div class="law-definition" data-edit-slot="s7-object">马克思主义政治经济学把人与人之间的经济关系从一般社会关系中抽象出来，以<b>生产关系及其运动规律</b>为研究对象。</div></div>
+          <p class="focus-strip fragment"><b>规范表述：</b>研究生产关系不能把它孤立起来，必须联系生产力和上层建筑，在矛盾运动中揭示社会经济过程的内在规律。 <span class="source-ref">教材P8、P13</span></p></main>
+    <footer class="deck-footer"><span data-edit-slot="s7-footer">政治经济学 · 导论</span><span class="page-no">08 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-8" data-slide-title="社会生产的四个环节">
+<section class="slide" id="slide-8" data-slide-title="狭义生产关系与广义生产关系" data-teach-minutes="2">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s8-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s8-source">教材第8—10页｜官方PPT 22</span>
+      <span class="lesson-tag" data-edit-slot="s8-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s8-source">教材P8—9 · 官方PPT第21—22页</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">连续不断的社会生产，就是社会再生产</div>
-      <div class="ring4 reveal">
-        <div class="rnode"><strong data-edit-slot="s8-a">生产</strong><p class="body">创造产品与服务</p></div>
-        <div class="rnode fragment"><strong data-edit-slot="s8-b">分配</strong><p class="body">决定资源与成果的份额</p></div>
-        <div class="rnode fragment"><strong data-edit-slot="s8-c">消费</strong><p class="body">实现目的并再生产人的能力</p></div>
-        <div class="rnode fragment"><strong data-edit-slot="s8-d">交换</strong><p class="body">连接生产与消费、转换形态</p></div>
-      </div></main>
-    <footer class="deck-footer"><span data-edit-slot="s8-footer">政治经济学 · 导论</span><span class="page-no">09 / 16</span></footer>
+          <div class="relation-sheet reveal">
+            <section class="redline"><div class="kicker">直接生产过程</div><h3 data-edit-slot="s8-a">狭义生产关系</h3><p>直接生产过程中形成的经济关系，主要是生产资料所有制关系。</p><div class="judgment">回答谁占有和支配生产资料，谁在生产中处于何种地位。</div></section>
+            <section><div class="kicker">社会再生产全过程</div><h3 data-edit-slot="s8-b">广义生产关系</h3><p>在生产、分配、交换和消费四个环节形成的社会经济关系的有机整体。</p><div class="judgment">以直接生产关系为基础，展开为社会再生产各环节的经济关系。</div></section>
+          </div>
+          <p class="micro-note">易混淆：广义生产关系不是四类互不相干的关系，而是由直接生产过程居于基础和核心地位的有机整体。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s8-footer">政治经济学 · 导论</span><span class="page-no">09 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-9" data-slide-title="生产起主导，其他环节会反作用">
+<section class="slide" id="slide-9" data-slide-title="社会生产总过程的四个环节" data-teach-minutes="2">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s9-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s9-source">教材第9—10页｜关系机制</span>
+      <span class="lesson-tag" data-edit-slot="s9-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s9-source">教材P8—10 · 官方PPT第22页</span>
     </header>
     <main class="stage">
-      <h2 class="reveal" data-edit-slot="s9-title">不是“生产单向决定一切”，也不是“四环节完全平行”</h2>
-      <div class="flow reveal">
-        <div class="node" style="border-color:var(--red)"><h3>生产</h3><p class="small">决定可分配、可交换、可消费的对象与方式</p></div><div class="arrow">⇄</div>
-        <div class="node fragment"><h3>分配</h3><p class="small">影响资源配置与劳动激励</p></div><div class="arrow fragment">⇄</div>
-        <div class="node fragment"><h3>交换</h3><p class="small">影响实现速度与生产规模</p></div><div class="arrow fragment">⇄</div>
-        <div class="node fragment"><h3>消费</h3><p class="small">形成目的、动力与再生产条件</p></div>
-      </div>
-      <p class="lead fragment" data-edit-slot="s9-call"><b class="accent">主导作用</b>与<b class="accent">相互作用</b>要同时讲清。</p></main>
-    <footer class="deck-footer"><span data-edit-slot="s9-footer">政治经济学 · 导论</span><span class="page-no">10 / 16</span></footer>
+          <div class="four-process reveal">
+            <div class="dominant"><strong data-edit-slot="s9-a">生产</strong><span>直接生产过程，提供产品并决定社会再生产的基本性质</span></div>
+            <div class="fragment"><strong data-edit-slot="s9-b">分配</strong><span>分配生产要素与产品，把生产同消费联结起来</span></div>
+            <div class="fragment"><strong data-edit-slot="s9-c">交换</strong><span>交换活动、能力、生产资料与产品，形成社会分工联系</span></div>
+            <div class="fragment"><strong data-edit-slot="s9-d">消费</strong><span>社会再生产的最终目的和动力，使产品成为现实产品</span></div>
+          </div>
+          <p class="focus-strip" data-edit-slot="s9-call"><b>总关系：</b>生产起主导的决定性作用；分配、交换、消费由生产决定，同时对生产发生重要反作用。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s9-footer">政治经济学 · 导论</span><span class="page-no">10 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-blue" id="slide-10" data-slide-title="订单流与关系流">
+<section class="slide" id="slide-10" data-slide-title="生产与消费的关系" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s10-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s10-source">贯穿案例｜双层流程</span>
+      <span class="lesson-tag" data-edit-slot="s10-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s10-source">教材P9</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">同一过程，两条并行的线</div><h2 class="reveal" data-edit-slot="s10-title">订单在流动，权利与收益也在流动</h2>
-      <div class="compare reveal">
-        <div><div class="cap">可见的订单流</div><div class="flow" style="margin-top:1rem"><div class="node">下单</div><div class="arrow">→</div><div class="node">制作</div><div class="arrow">→</div><div class="node">交付</div></div></div>
-        <div class="fragment"><div class="cap">需要解释的关系流</div><div class="flow" style="margin-top:1rem"><div class="node">决策权</div><div class="arrow">→</div><div class="node">风险</div><div class="arrow">→</div><div class="node">收益</div></div></div>
-      </div>
-      <p class="lead fragment" data-edit-slot="s10-call">流程图回答“发生了什么”；关系图继续回答“为什么这样发生”。</p></main>
-    <footer class="deck-footer"><span data-edit-slot="s10-footer">政治经济学 · 导论</span><span class="page-no">11 / 16</span></footer>
+          <div class="relation-sheet reveal">
+            <section class="redline"><h3>直接同一性</h3><p>生产直接消费生产要素。劳动者在生产中支出能力，生产资料在使用中被消耗。</p><p>消费也直接生产。产品消费再生产人的劳动能力。</p></section>
+            <section><h3>相互作用</h3><p><b>生产决定消费：</b>创造消费对象、消费方式和消费动力。</p><p><b>消费反作用于生产：</b>使产品最终完成，并创造新的生产需要和内在动力。</p></section>
+          </div>
+          <p class="focus-strip fragment"><b>关键判断：</b>生产决定消费，不等于消费被动。消费通过需要、实现和反馈反作用于生产。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s10-footer">政治经济学 · 导论</span><span class="page-no">11 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-11" data-slide-title="生产力与生产关系的矛盾运动">
+<section class="slide" id="slide-11" data-slide-title="生产与分配、交换的关系" data-teach-minutes="3">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s11-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s11-source">教材第11页｜官方PPT 23</span>
+      <span class="lesson-tag" data-edit-slot="s11-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s11-source">教材P9—10</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">适合 → 促进；不适合 → 制约；调整 → 新适合</div>
-      <div class="equation reveal"><span class="term" data-edit-slot="s11-a">生产力发展</span><span>⇄</span><span class="term" data-edit-slot="s11-b">生产关系调整</span></div>
-      <div class="three-col reveal">
-        <div class="panel"><h3>适应</h3><p class="body">组织和制度释放生产能力</p></div>
-        <div class="panel red fragment"><h3>张力</h3><p class="body">旧关系阻碍新能力发挥</p></div>
-        <div class="panel blue fragment"><h3>变革</h3><p class="body">关系调整形成新的结合方式</p></div>
-      </div>
-      <p class="focus-strip fragment"><b>规范表述：</b>生产力代表生产的物质内容，生产关系是生产的社会形式；生产力决定生产关系，生产关系反作用于生产力。 <span class="source-ref">教材第11页</span></p></main>
-    <footer class="deck-footer"><span data-edit-slot="s11-footer">政治经济学 · 导论</span><span class="page-no">12 / 16</span></footer>
+          <div class="relation-sheet reveal">
+            <section class="redline"><h3>生产与分配</h3><p><b>生产中的分配：</b>生产资料归谁占有、社会成员怎样进入不同生产部门。</p><p><b>产品的分配：</b>生产决定可分配的对象和分配形式；分配又通过利益激励、要素流动和配置效率反作用于生产。</p></section>
+            <section><h3>生产与交换</h3><p><b>生产中的交换：</b>活动、能力、生产资料在生产过程内部的交换与配置。</p><p><b>产品的交换：</b>生产决定交换的社会性质、深度和方式；交换范围扩大又推动生产规模扩大和分工深化。</p></section>
+          </div>
+          <p class="focus-strip fragment"><b>共同结构：</b>生产是前提并起决定作用，分配与交换是联结生产和消费的桥梁，也会反过来影响生产。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s11-footer">政治经济学 · 导论</span><span class="page-no">12 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-12" data-slide-title="经济基础与上层建筑">
+<section class="slide tone-dark" id="slide-12" data-slide-title="模块小结：研究对象与社会再生产" data-teach-minutes="1">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s12-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s12-source">教材第11—12页｜官方PPT 24</span>
+      <span class="lesson-tag" data-edit-slot="s12-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s12-source">教材P6—10</span>
     </header>
     <main class="stage">
-      <div class="hero-row">
-        <div class="reveal"><div class="kicker">研究生产关系不能隔绝制度环境</div><h2 data-edit-slot="s12-title">经济基础与上层建筑<br>相互制约、相互作用</h2><p class="lead">一定社会的生产关系总和构成经济基础；政治法律制度与社会意识形态构成相应上层建筑。</p></div>
-        <div class="flow reveal" style="flex-direction:column"><div class="node" style="border-color:var(--blue)"><h3>上层建筑</h3><p class="small">政治法律制度 · 社会意识形态</p></div><div class="arrow">⇅</div><div class="node" style="border-color:var(--red)"><h3>经济基础</h3><p class="small">占统治地位的生产关系总和</p></div></div>
-      </div></main>
-    <footer class="deck-footer"><span data-edit-slot="s12-footer">政治经济学 · 导论</span><span class="page-no">13 / 16</span></footer>
+          <div class="summary-ledger reveal">
+            <div><strong>核心概念</strong><span>物质资料生产、生产力、生产关系、生产资料、社会再生产。</span></div>
+            <div><strong>概念层次</strong><span>狭义生产关系聚焦直接生产，广义生产关系覆盖生产、分配、交换和消费。</span></div>
+            <div><strong>关键关系</strong><span>生产决定分配、交换和消费，它们又通过实现、激励和反馈反作用于生产。</span></div>
+            <div><strong>规范判断</strong><span>马克思主义政治经济学研究生产关系及其运动规律，但研究必须联系生产力和上层建筑。</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s12-footer">政治经济学 · 导论</span><span class="page-no">13 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-13" data-slide-title="和主流分析工具怎样对话">
+<section class="slide" id="slide-13" data-slide-title="生产力决定生产关系" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s13-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s13-source">比较页｜不强行对应</span>
+      <span class="lesson-tag" data-edit-slot="s13-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s13-source">教材P11</span>
     </header>
     <main class="stage">
-      <div class="matrix reveal">
-        <div class="head">问题</div><div class="head">生产力 / 生产关系</div><div class="head">常见主流工具</div><div class="head">不能直接等同</div>
-        <div class="rowhead">投入怎样变成产出</div><div>劳动者、资料、对象及结合</div><div>生产函数、技术效率</div><div>生产力不只是可量化投入</div>
-        <div class="rowhead">谁拥有和决策</div><div>所有制与生产中的地位</div><div>产权、契约、企业理论</div><div>生产关系不等于产权条款</div>
-        <div class="rowhead">为何发生历史变化</div><div>矛盾运动与社会形态</div><div>制度变迁、发展经济学</div><div>历史观和解释尺度不同</div>
-      </div>
-      <p class="micro-note" data-edit-slot="s13-note">可以互相借鉴问题与证据，但不能把概念做机械的一一映射。</p></main>
-    <footer class="deck-footer"><span data-edit-slot="s13-footer">政治经济学 · 导论</span><span class="page-no">14 / 16</span></footer>
+          <h2 class="reveal" data-edit-slot="s13-title">生产力的发展水平与发展要求规定生产关系的形成和变化</h2>
+          <div class="logic-chain reveal">
+            <div class="logic-step"><strong>发展水平</strong><span>一定生产力水平对应一定的社会结合方式</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>发展变化</strong><span>生产力变化提出调整生产关系的要求</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>关系变革</strong><span>不适应的环节、方面和具体形式需要改革完善</span></div>
+          </div>
+          <p class="focus-strip fragment"><b>决定作用：</b>生产力是最活跃、最革命的因素，是社会生产方式发展变化的最终决定力量。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s13-footer">政治经济学 · 导论</span><span class="page-no">14 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-red" id="slide-14" data-slide-title="辨析：算法属于哪一边">
+<section class="slide" id="slide-14" data-slide-title="生产关系反作用于生产力" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s14-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s14-source">全班讨论 4 分钟</span>
+      <span class="lesson-tag" data-edit-slot="s14-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s14-source">教材P11</span>
     </header>
     <main class="stage">
-      <div class="discussion reveal"><div class="clock">4′</div><div><div class="kicker">ONE OBJECT · TWO DIMENSIONS</div><h2 data-edit-slot="s14-title">平台算法，是生产力，还是生产关系？</h2><div class="prompt-list" style="margin-top:1rem"><div>从“提高配送与排产能力”回答一次</div><div>从“谁设定规则、谁被规则约束”回答一次</div><div>能否得出“同一技术具有双重维度”？</div></div></div></div></main>
-    <footer class="deck-footer"><span data-edit-slot="s14-footer">政治经济学 · 导论</span><span class="page-no">15 / 16</span></footer>
+          <div class="duality reveal">
+            <div class="side"><div class="kicker">相适应</div><h3 data-edit-slot="s14-a">促进生产力</h3><p>生产资料占有方式、劳动组织和利益关系有利于调动劳动者并有效结合生产要素。</p></div>
+            <div class="pivot">反作用</div>
+            <div class="side fragment"><div class="kicker">不适应</div><h3 data-edit-slot="s14-b">阻碍生产力</h3><p>僵化的关系成为生产力发展的桎梏，要求生产关系发生必要变革。</p></div>
+          </div>
+          <p class="focus-strip fragment"><b>研究要求：</b>不能脱离生产力说明生产关系的产生、发展和变革，也不能把生产力研究等同于具体技术和工艺研究。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s14-footer">政治经济学 · 导论</span><span class="page-no">15 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-dark" id="slide-15" data-slide-title="第二讲小结：一张关系地图">
+<section class="slide" id="slide-15" data-slide-title="经济基础与上层建筑" data-teach-minutes="2.5">
   <div class="slide-content">
     <header class="topline reveal">
-      <span class="lesson-tag" data-edit-slot="s15-lesson">第 2 讲 / 45 MIN</span>
-      <span class="source-tag" data-edit-slot="s15-source">重难点复述｜教材第7—12页</span>
+      <span class="lesson-tag" data-edit-slot="s15-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s15-source">教材P11—13 · 官方PPT第23—24页</span>
     </header>
     <main class="stage">
-      <div class="kicker reveal">重难点 · 60秒复述</div><h2 class="reveal" data-edit-slot="s15-title">四组关系成对记，才能避免把概念拆散</h2>
-      <div class="memory-grid reveal">
-        <div class="memory-card"><b>研究对象</b><span>生产关系；研究时必须联系生产力和上层建筑</span></div>
-        <div class="memory-card fragment"><b>生产力构成</b><span>劳动者 + 生产资料；生产资料 = 劳动资料 + 劳动对象</span></div>
-        <div class="memory-card fragment"><b>生产关系口径</b><span>狭义看直接生产；广义看生产、分配、交换、消费</span></div>
-        <div class="memory-card fragment"><b>两对辩证关系</b><span>生产力 ⇄ 生产关系；经济基础 ⇄ 上层建筑</span></div>
-      </div>
-      <p class="focus-strip fragment" data-edit-slot="s15-q"><b>总原则：</b>生产在再生产四环节中起主导作用，其他环节又反作用于生产。下一讲：怎样从现象走向规律？</p></main>
-    <footer class="deck-footer"><span data-edit-slot="s15-footer">政治经济学 · 导论</span><span class="page-no">16 / 16</span></footer>
+          <div class="dialectic-map reveal">
+            <div class="block"><strong>生产关系总和</strong><span>构成社会的经济基础</span></div>
+            <div class="double">⇄</div>
+            <div class="block"><strong>经济基础</strong><span>决定上层建筑的性质及其变革</span></div>
+            <div class="double">⇄</div>
+            <div class="block"><strong>上层建筑</strong><span>政治法律制度、设施和社会意识形式，对经济基础发生反作用</span></div>
+          </div>
+          <p class="focus-strip fragment"><b>反作用：</b>适应新的经济基础时，上层建筑促进其巩固和发展；维护旧的经济基础时，会阻碍新的经济基础形成和发展。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s15-footer">政治经济学 · 导论</span><span class="page-no">16 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-blue" id="slide-16" data-slide-title="模块小结：两组基本矛盾" data-teach-minutes="1.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s16-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s16-source">教材P11—13</span>
+    </header>
+    <main class="stage">
+          <div class="summary-ledger reveal">
+            <div><strong>生产力与生产关系</strong><span>生产力决定生产关系；生产关系对生产力具有促进或阻碍作用。</span></div>
+            <div><strong>经济基础与上层建筑</strong><span>经济基础决定上层建筑；上层建筑又服务、巩固或阻碍经济基础。</span></div>
+            <div><strong>基本矛盾</strong><span>两组矛盾存在于一切社会形态，并贯穿各社会形态发展始终。</span></div>
+            <div><strong>研究原则</strong><span>只有联系生产力和上层建筑，才能全面把握生产关系的运动规律。</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s16-footer">政治经济学 · 导论</span><span class="page-no">17 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-17" data-slide-title="与西方经济学入门分析的联系和区别" data-teach-minutes="2">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s17-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s17-source">比较理解 · 并非完全对应</span>
+    </header>
+    <main class="stage">
+          <div class="comparison-table reveal">
+            <div class="head">比较维度</div><div class="head">马克思主义政治经济学</div><div class="head">主流西方经济学常见入门</div>
+            <div class="row">核心问题</div><div>生产关系怎样形成、运动和变化</div><div>稀缺条件下主体如何选择，价格如何配置资源</div>
+            <div class="row">分析重点</div><div>所有制、劳动组织、分配关系与历史条件</div><div>偏好、约束、激励、均衡与福利</div>
+            <div class="row">共同空间</div><div>都需要清晰概念、事实证据和严密逻辑</div><div>微观工具可以帮助观察行为、机制和效果</div>
+          </div>
+          <p class="micro-note">说明：二者存在分析上的联系，但研究对象、问题意识和理论范畴并非一一对应；西方经济学内部也包含制度、历史等多种研究传统。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s17-footer">政治经济学 · 导论</span><span class="page-no">18 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-dark" id="slide-18" data-slide-title="综合案例：外卖平台中的生产过程" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s18-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s18-source">类型化现实案例 · 不对应某一平台</span>
+    </header>
+    <main class="stage">
+          <div class="kicker reveal">唯一桥梁案例 · 背景</div>
+          <h2 class="reveal" data-edit-slot="s18-title">一份订单把技术、劳动组织、交换与分配连接在一起</h2>
+          <div class="case-flow reveal">
+            <div><strong>消费者下单</strong><span>需求进入平台，商品与配送服务开始匹配</span></div>
+            <div class="algorithm fragment"><strong>算法调度</strong><span>计算路径、时限、派单和优先级</span></div>
+            <div class="fragment"><strong>商家生产</strong><span>设备、原料、劳动和管理形成餐品</span></div>
+            <div class="fragment"><strong>骑手履约</strong><span>劳动者借助车辆、手机和信息系统完成配送</span></div>
+            <div class="fragment"><strong>结算评价</strong><span>平台规则连接收入分配、消费者评价与后续订单</span></div>
+          </div>
+          <p class="micro-note">案例只用于调用教材概念，不使用未经核实的具体平台数据。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s18-footer">政治经济学 · 导论</span><span class="page-no">19 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-red" id="slide-19" data-slide-title="综合案例：从现象进入关系" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s19-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s19-source">课堂分析</span>
+    </header>
+    <main class="stage">
+          <div class="case-questions reveal">
+            <div data-edit-slot="s19-q1">算法、智能手机和导航系统使生产力发生了哪些变化？</div>
+            <div class="fragment" data-edit-slot="s19-q2">派单权、计价规则、评价机制和风险承担体现了哪些生产关系？</div>
+            <div class="fragment" data-edit-slot="s19-q3">生产、分配、交换和消费怎样在一份订单中相互连接？</div>
+            <div class="fragment" data-edit-slot="s19-q4">仅描述订单量、配送时间和收入变化，能否解释控制权与利益关系为何这样形成？</div>
+          </div>
+          <p class="focus-strip fragment"><b>理论过渡：</b>现实经济现象需要数据描述，更需要从现象中识别内在经济关系，并进一步说明这些关系怎样反复发生、在什么条件下发挥作用。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s19-footer">政治经济学 · 导论</span><span class="page-no">20 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-20" data-slide-title="从经济现象到经济规律" data-teach-minutes="1.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s20-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s20-source">教材P14—15</span>
+    </header>
+    <main class="stage">
+          <h2 class="reveal" data-edit-slot="s20-title">描述“发生了什么”只是起点，科学研究还要解释“为什么反复这样发生”</h2>
+          <div class="logic-chain reveal">
+            <div class="logic-step"><strong>经济现象</strong><span>订单、价格、工时、收入和规则变化</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>经济关系</strong><span>所有、组织、交换、分配和利益联系</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>作用条件</strong><span>生产力水平、制度和历史范围</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>经济规律</strong><span>内在、本质、必然的联系</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s20-footer">政治经济学 · 导论</span><span class="page-no">21 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-21" data-slide-title="科学性与阶级性的统一" data-teach-minutes="3">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s21-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s21-source">教材P13—14 · 官方PPT第26页</span>
+    </header>
+    <main class="stage">
+          <div class="relation-sheet reveal">
+            <section><div class="kicker">科学性</div><h3 data-edit-slot="s21-a">揭示客观规律</h3><p>以辩证唯物主义和历史唯物主义为基础，依据事实和实践，科学说明经济关系及其运动。</p></section>
+            <section class="redline"><div class="kicker">阶级性</div><h3 data-edit-slot="s21-b">代表无产阶级利益</h3><p>公开维护无产阶级和广大劳动群众利益，具有鲜明的批判性和革命性。</p></section>
+          </div>
+          <div class="definition-box fragment"><span class="definition-label">核心判断</span><p data-edit-slot="s21-call">马克思主义政治经济学把严谨的科学性同鲜明的阶级性内在地、不可分割地结合在理论本身之中。</p><span class="source-ref">教材P14</span></div>
+          <p class="micro-note">易混淆：阶级立场不能代替事实和逻辑；科学性也不意味着回避现实经济关系中的利益差异。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s21-footer">政治经济学 · 导论</span><span class="page-no">22 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-22" data-slide-title="马克思主义政治经济学的任务" data-teach-minutes="3">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s22-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s22-source">教材P14—17 · 官方PPT第27页</span>
+    </header>
+    <main class="stage">
+          <div class="concept-ledger reveal">
+            <div>总任务</div><div>揭示经济运动的客观规律，说明生产关系及其实现、发展和变化的规律。</div>
+            <div>资本主义</div><div>研究资本主义生产关系的本质、内在矛盾以及发展变化规律。</div>
+            <div>社会主义</div><div>总结建设与改革经验，研究社会主义生产关系及其发展变化规律。</div>
+            <div>普遍规律</div><div>在研究各种特殊规律的基础上，揭示生产和交换的一般规律及经济运动的普遍联系。</div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s22-footer">政治经济学 · 导论</span><span class="page-no">23 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-23" data-slide-title="经济规律的定义与基本特征" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s23-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s23-source">教材P14—15</span>
+    </header>
+    <main class="stage">
+          <div class="law-card reveal"><div class="law-definition" data-edit-slot="s23-def">经济规律是经济现象和经济过程之间<b>内在的、本质的、必然的联系</b>。</div><div class="source-ref" style="margin-top:.65rem">教材P14</div></div>
+          <div class="law-traits fragment">
+            <div><strong>重复性</strong><span>在相同或相似条件下反复出现并发挥作用</span></div>
+            <div><strong>普遍性</strong><span>对同类经济现象具有一般约束，但存在适用范围</span></div>
+            <div><strong>强制性</strong><span>人不能任意违背客观联系，违背会承担相应后果</span></div>
+          </div>
+          <p class="micro-note">一次偶然事件、一个统计相关或一条主观规定，都不能直接等同于经济规律。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s23-footer">政治经济学 · 导论</span><span class="page-no">24 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-24" data-slide-title="经济规律的客观性、条件性与人的活动" data-teach-minutes="3">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s24-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s24-source">教材P14—15</span>
+    </header>
+    <main class="stage">
+          <div class="summary-ledger reveal">
+            <div><strong>客观性</strong><span>经济规律不以人的主观意志为转移，也不能靠愿望创造或消灭。</span></div>
+            <div><strong>条件性</strong><span>规律总同一定社会经济条件相联系。条件存在时必然发挥作用，条件消失后作用范围随之变化。</span></div>
+            <div><strong>可以认识和利用</strong><span>人们能够发现规律，按照规律组织经济活动，使主观努力与客观规律相符合。</span></div>
+            <div><strong>可以改变作用条件</strong><span>制度、政策和技术可以改变规律发挥作用的具体条件，却不能主观宣布取消客观联系。</span></div>
+          </div>
+          <p class="focus-strip fragment"><b>关键判断：</b>承认经济规律的客观性，不等于否定人的能动作用；人的能动性必须建立在认识规律和尊重条件的基础上。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s24-footer">政治经济学 · 导论</span><span class="page-no">25 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-25" data-slide-title="经济规律的三种历史范围" data-teach-minutes="3">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s25-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s25-source">教材P15</span>
+    </header>
+    <main class="stage">
+          <div class="comparison-table reveal">
+            <div class="head">类型</div><div class="head">适用条件</div><div class="head">教材举例</div>
+            <div class="row">一般规律</div><div>贯穿人类社会发展始终，在一切社会经济形态中起作用</div><div>生产关系适合生产力；上层建筑适合经济基础</div>
+            <div class="row">共有规律</div><div>在若干社会经济形态或共同经济条件下起作用</div><div>商品经济中的价值规律；社会化大生产中的按比例发展</div>
+            <div class="row">特有规律</div><div>由一定社会经济形态的特殊生产关系产生</div><div>资本主义剩余价值、资本积累；社会主义按劳分配等</div>
+          </div>
+          <p class="micro-note">重点理解：经济规律具有历史性。说明一条规律时，必须同时说明它发挥作用的社会经济条件和适用范围。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s25-footer">政治经济学 · 导论</span><span class="page-no">26 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-dark" id="slide-26" data-slide-title="模块小结：性质、任务与经济规律" data-teach-minutes="1.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s26-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s26-source">教材P13—17</span>
+    </header>
+    <main class="stage">
+          <div class="summary-ledger reveal">
+            <div><strong>性质</strong><span>科学性与阶级性高度统一，科学认识同无产阶级和劳动群众的利益在理论中结合。</span></div>
+            <div><strong>任务</strong><span>揭示经济运动的客观规律，研究资本主义、社会主义及经济运动的普遍规律。</span></div>
+            <div><strong>经济规律</strong><span>经济现象和过程之间内在、本质、必然的联系，具有重复性、普遍性和强制性。</span></div>
+            <div><strong>条件与实践</strong><span>规律不以意志为转移，但人可以认识、利用规律并改变其作用条件。</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s26-footer">政治经济学 · 导论</span><span class="page-no">27 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-27" data-slide-title="研究方法是一个有层次的体系" data-teach-minutes="2">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s27-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s27-source">教材P17—19 · 官方PPT第28页</span>
+    </header>
+    <main class="stage">
+          <div class="method-stack reveal">
+            <div class="root"><strong>唯物辩证法</strong><span>根本方法。把经济关系放在联系、矛盾、运动和历史发展中考察。</span></div>
+            <div class="fragment"><strong>科学抽象法</strong><span>重要方法。从现象材料进入本质关系，再由抽象概念重建具体整体。</span></div>
+            <div class="fragment"><strong>逻辑与历史相统一</strong><span>让概念的逻辑进程以真实历史为基础，并反映历史发展的本质联系。</span></div>
+            <div class="fragment"><strong>定性与定量相结合</strong><span>既把握社会关系的质，又测量数量变化，使规律说明更具体。</span></div>
+          </div>
+          <p class="micro-note">这些方法彼此配合。不能把方法页理解成互不相干的名称清单。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s27-footer">政治经济学 · 导论</span><span class="page-no">28 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-28" data-slide-title="唯物辩证法怎样发挥根本作用" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s28-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s28-source">教材P17—18</span>
+    </header>
+    <main class="stage">
+          <h2 class="reveal" data-edit-slot="s28-title">把生产关系放在普遍联系、矛盾运动和历史变化中研究</h2>
+          <div class="concept-ledger reveal">
+            <div>研究联系</div><div>从全部社会关系中划分经济领域，再把生产关系看作决定其他关系的基础性关系。</div>
+            <div>研究矛盾</div><div>分析生产力与生产关系、经济基础与上层建筑之间的对立统一，寻找矛盾运动的条件和方向。</div>
+            <div>研究发展</div><div>运用量变与质变、否定之否定等辩证观点，说明生产关系产生、发展和更替的历史过程。</div>
+          </div>
+          <p class="focus-strip fragment"><b>它解决的问题：</b>经济关系为何不是静止结构，而是在矛盾和相互作用中形成、变化并发生历史更替。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s28-footer">政治经济学 · 导论</span><span class="page-no">29 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-29" data-slide-title="科学抽象法：从具体到抽象，再上升到具体" data-teach-minutes="3.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s29-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s29-source">教材P18—19</span>
+    </header>
+    <main class="stage">
+          <div class="logic-chain reveal">
+            <div class="logic-step"><strong>感性具体</strong><span>丰富、杂多的经济事实和现象材料</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>分析与抽象</strong><span>去粗取精、去伪存真，由表及里，抽取本质联系</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>理论范畴</strong><span>形成能够说明本质与规律的概念体系</span></div><div class="logic-arrow">→</div>
+            <div class="logic-step fragment"><strong>思维具体</strong><span>借助一系列中介，重建多样性统一的具体整体</span></div>
+          </div>
+          <div class="relation-sheet fragment">
+            <section><h3>从具体到抽象</h3><p>深入研究过程，透过现象揭示本质，形成理论范畴。</p></section>
+            <section class="redline"><h3>从抽象上升到具体</h3><p>逻辑叙述过程，用范畴及其中介再现社会经济过程的内在整体。</p></section>
+          </div>
+          <p class="micro-note">易混淆：“思维具体”不是回到未经分析的原始材料，而是经过理论综合形成的具体认识。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s29-footer">政治经济学 · 导论</span><span class="page-no">30 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-30" data-slide-title="逻辑与历史相统一" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s30-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s30-source">教材P19</span>
+    </header>
+    <main class="stage">
+          <div class="relation-sheet reveal">
+            <section><div class="kicker">历史进程</div><h3 data-edit-slot="s30-a">现实实际怎样发生</h3><p>包含偶然、曲折和相互交错的具体过程，提供理论认识的真实基础。</p></section>
+            <section class="redline"><div class="kicker">逻辑进程</div><h3 data-edit-slot="s30-b">理论怎样再现本质</h3><p>从抽象上升到具体，以概念和范畴的次序揭示历史发展的规律性。</p></section>
+          </div>
+          <div class="definition-box fragment"><span class="definition-label">统一要求</span><p data-edit-slot="s30-call">逻辑进程要同历史进程相一致并反映历史真实，同时排除非历史趋势的偶然现象，在典型发展点上考察本质联系。</p><span class="source-ref">教材P19</span></div></main>
+    <footer class="deck-footer"><span data-edit-slot="s30-footer">政治经济学 · 导论</span><span class="page-no">31 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide" id="slide-31" data-slide-title="定性分析与定量分析相结合" data-teach-minutes="2.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s31-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s31-source">教材P19 · 官方PPT第28页</span>
+    </header>
+    <main class="stage">
+          <div class="relation-sheet reveal">
+            <section class="redline"><h3 data-edit-slot="s31-a">定性分析</h3><p>把握经济现象的质的规定性，说明经济关系的性质、结构和历史条件。</p><div class="judgment">回答“是什么、为什么、在什么社会关系中形成”。</div></section>
+            <section><h3 data-edit-slot="s31-b">定量分析</h3><p>测量经济现象的数量规定性和变化，检验差异、强度、比例及趋势。</p><div class="judgment">回答“多少、怎样变化、影响有多大”。</div></section>
+          </div>
+          <p class="focus-strip fragment"><b>方法关系：</b>两者必须有机结合。数学和计量工具可以增强证据，但变量定义、机制解释和适用条件仍需要理论判断。</p>
+          <p class="micro-note">与主流实证分析存在工具上的共同空间，但问题意识和解释目标并非完全对应。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s31-footer">政治经济学 · 导论</span><span class="page-no">32 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-blue" id="slide-32" data-slide-title="本单元知识框架" data-teach-minutes="1.5">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s32-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s32-source">教材P6—19</span>
+    </header>
+    <main class="stage">
+          <div class="framework-map reveal">
+            <div><strong>物质资料生产</strong><span>社会存在发展的基础与研究起点</span></div>
+            <div class="em"><strong>生产力 ⇄ 生产关系</strong><span>物质内容与社会形式</span></div>
+            <div><strong>社会再生产</strong><span>生产、分配、交换、消费</span></div>
+            <div><strong>经济基础 ⇄ 上层建筑</strong><span>决定与反作用</span></div>
+            <div><strong>现实经济现象</strong><span>在关系与条件中分析</span></div>
+            <div class="em"><strong>经济规律与任务</strong><span>揭示内在、本质、必然联系</span></div>
+            <div><strong>性质与方法</strong><span>科学性、阶级性与方法体系</span></div>
+          </div>
+          <p class="focus-strip fragment"><b>总主题：</b>马克思主义政治经济学研究生产关系及其运动规律，在生产力和上层建筑的联系中说明经济现象，并以科学方法把握其历史条件。</p></main>
+    <footer class="deck-footer"><span data-edit-slot="s32-footer">政治经济学 · 导论</span><span class="page-no">33 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-dark" id="slide-33" data-slide-title="核心结论（一）" data-teach-minutes="1">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s33-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s33-source">本单元复习 · 教材P6—19</span>
+    </header>
+    <main class="stage">
+          <div class="conclusions reveal">
+            <div><b>01</b><span>物质资料生产是社会存在和发展的基础，也是政治经济学研究的出发点。</span></div>
+            <div><b>02</b><span>生产力表现人与自然的关系，生产关系表现生产中人与人的社会关系。</span></div>
+            <div><b>03</b><span>劳动资料与劳动对象合称生产资料，劳动者和生产资料构成生产的基本要素。</span></div>
+            <div><b>04</b><span>广义生产关系是生产、分配、交换和消费四个环节经济关系的有机整体。</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s33-footer">政治经济学 · 导论</span><span class="page-no">34 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-dark" id="slide-34" data-slide-title="核心结论（二）" data-teach-minutes="1">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s34-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s34-source">本单元复习 · 教材P6—19</span>
+    </header>
+    <main class="stage">
+          <div class="conclusions reveal">
+            <div><b>05</b><span>生产在社会生产总过程中起决定作用，分配、交换和消费又反作用于生产。</span></div>
+            <div><b>06</b><span>生产力决定生产关系，经济基础决定上层建筑，后二者分别具有反作用。</span></div>
+            <div><b>07</b><span>经济规律具有客观性并受社会经济条件制约，人可以认识、利用规律并改变作用条件。</span></div>
+            <div><b>08</b><span>唯物辩证法统摄科学抽象、逻辑与历史统一以及定性和定量相结合的方法。</span></div>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s34-footer">政治经济学 · 导论</span><span class="page-no">35 / 36</span></footer>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+<section class="slide tone-red" id="slide-35" data-slide-title="课后思考" data-teach-minutes="1">
+  <div class="slide-content">
+    <header class="topline reveal">
+      <span class="lesson-tag" data-edit-slot="s35-lesson">导论 · 研究对象、规律与方法</span>
+      <span class="source-tag" data-edit-slot="s35-source">教材导论思考题第1题、第4题 · 教材P33</span>
+    </header>
+    <main class="stage">
+          <div class="kicker reveal">严格依据教材整理答案</div>
+          <div class="homework reveal">
+            <article><div class="q" data-edit-slot="s35-q1">1. 试述马克思主义政治经济学的研究对象。</div><div class="hint">教材阅读范围：P6—13<br>关键词：物质资料生产、生产力、生产关系、社会再生产、经济基础、上层建筑</div></article>
+            <article class="fragment"><div class="q" data-edit-slot="s35-q2">2. 如何认识马克思主义政治经济学的研究方法？</div><div class="hint">教材阅读范围：P17—19<br>关键词：唯物辩证法、科学抽象、从抽象上升到具体、逻辑与历史统一、定性与定量结合</div></article>
+          </div></main>
+    <footer class="deck-footer"><span data-edit-slot="s35-footer">政治经济学 · 导论</span><span class="page-no">36 / 36</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
 </div>
-
 <script>
 (function () {
   'use strict';
