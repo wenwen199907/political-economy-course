@@ -886,6 +886,15 @@ h3 { font-size:clamp(1.08rem,1.55vw,1.9rem); line-height:1.2; font-weight:850; }
 
 
 
+
+
+
+
+
+
+
+
+
 /* === FUSED LECTURE 02: LARGE-TYPE TEACHING SYSTEM === */
 body.fused-deck {
   --f-title: clamp(3rem, 4.25vw, 5.15rem);
@@ -984,6 +993,7 @@ body.fused-deck .panel ul { margin-top: .55rem; }
 .comparison-table > div { padding:clamp(.55rem,.9vw,.95rem); border-right:2px solid currentColor; border-bottom:2px solid currentColor; font-size:var(--f-compact); line-height:1.32; }
 .comparison-table .head { background:var(--ink); color:#fff; font-weight:900; }
 .comparison-table .row { font-weight:900; color:var(--red); }
+.comparison-table.history-table > div { padding:clamp(.38rem,.62vw,.66rem); line-height:1.25; }
 
 .case-flow { display:grid; grid-template-columns:repeat(5,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
 .case-flow > div { padding:clamp(.75rem,1vw,1.05rem); min-height:22vh; }
@@ -997,6 +1007,40 @@ body.fused-deck .panel ul { margin-top: .55rem; }
 .case-questions > div:nth-child(even) { border-left:2px solid currentColor; }
 .case-questions > div:nth-child(n+3) { border-top:2px solid currentColor; }
 .case-questions > div::before { counter-increment:item; content:counter(item); position:absolute; left:1rem; top:.65rem; color:var(--red); font-size:clamp(2rem,2.5vw,3rem); font-weight:900; }
+
+.page-theme { margin:0; max-width:none; font-size:clamp(2.05rem,2.45vw,3rem) !important; line-height:1.15 !important; font-weight:900; letter-spacing:-.025em; }
+.case-visual-layout { display:grid; grid-template-columns:1.18fr .82fr; gap:clamp(.8rem,1.4vw,1.5rem); align-items:stretch; }
+.case-visual { width:100%; height:clamp(18rem,42vh,29rem); object-fit:cover; border:3px solid currentColor; display:block; }
+.case-material-page .case-visual { height:clamp(13rem,30vh,20rem); }
+.case-story { border-top:3px solid currentColor; border-bottom:3px solid currentColor; padding:clamp(.7rem,1.05vw,1.1rem); display:flex; flex-direction:column; justify-content:center; }
+.case-story strong { color:var(--red); font-size:clamp(1.5rem,1.68vw,1.95rem); }
+.case-story p { margin:.45rem 0 0; font-size:clamp(1.35rem,1.43vw,1.68rem) !important; line-height:1.43 !important; }
+.discussion-questions { display:grid; grid-template-columns:repeat(3,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
+.discussion-questions > div { display:grid; grid-template-columns:clamp(2.5rem,3vw,3.6rem) 1fr; gap:.45rem; align-items:start; padding:clamp(.5rem,.72vw,.8rem); font-size:clamp(1.35rem,1.45vw,1.72rem); line-height:1.32; }
+.discussion-questions > div + div { border-left:2px solid currentColor; }
+.discussion-questions b { color:var(--red); font-size:clamp(1.75rem,2vw,2.35rem); line-height:1; }
+.discussion-cue { margin:0; font-size:clamp(1.2rem,1.28vw,1.5rem) !important; font-weight:800; color:var(--muted); }
+.tone-dark .discussion-cue { color:rgba(255,255,255,.76); }
+.case-materials { display:grid; grid-template-rows:repeat(3,1fr); border-top:3px solid currentColor; }
+.case-materials > div { padding:clamp(.55rem,.85vw,.9rem); border-bottom:2px solid currentColor; }
+.case-materials strong { display:block; color:var(--red); font-size:clamp(1.45rem,1.62vw,1.9rem); }
+.case-materials span { display:block; margin-top:.25rem; font-size:clamp(1.28rem,1.3vw,1.55rem); line-height:1.32; }
+.case-takeaway { margin:0; padding:.65rem .9rem; border-left:8px solid var(--red); background:rgba(213,45,35,.08); font-size:var(--f-compact) !important; line-height:1.34 !important; }
+.case-analysis { display:grid; border-top:3px solid currentColor; }
+.case-analysis-row { display:grid; grid-template-columns:.9fr 1.45fr; border-bottom:2px solid currentColor; }
+.case-analysis-row > div { padding:clamp(.55rem,.85vw,.9rem); font-size:clamp(1.45rem,1.5vw,1.78rem); line-height:1.32; }
+.case-analysis-row .question { font-weight:850; border-right:2px solid currentColor; }
+.case-analysis-row .question b { color:var(--red); }
+.case-analysis-row .answer strong { color:var(--red); }
+.answer-location { display:inline-block; margin-top:.28rem; color:var(--muted); font-size:clamp(1.05rem,1vw,1.2rem); font-weight:750; }
+.tone-red .case-analysis-row .question b,
+.tone-red .case-analysis-row .answer strong { color:#111; }
+.tone-red .answer-location,
+.tone-red .homework .hint { color:rgba(255,255,255,.88); }
+.law-check { display:grid; grid-template-columns:repeat(3,1fr); border:2px solid currentColor; }
+.law-check > div { padding:clamp(.5rem,.75vw,.78rem); font-size:clamp(1.35rem,1.42vw,1.65rem); line-height:1.3; }
+.law-check > div + div { border-left:2px solid currentColor; }
+.law-check strong { color:var(--red); }
 
 .law-card { border-left:clamp(10px,.8vw,15px) solid var(--red); padding:clamp(.8rem,1.3vw,1.4rem); background:rgba(255,255,255,.58); }
 .law-card .law-definition { font-size:clamp(2rem,2.25vw,2.7rem); line-height:1.38; font-weight:800; }
@@ -1077,6 +1121,19 @@ body.fused-deck .panel ul { margin-top: .55rem; }
   .case-flow span { font-size:.72rem; }
   .case-questions > div { min-height:0; padding:.5rem .45rem .5rem 2rem; }
   .case-questions > div::before { left:.55rem; top:.35rem; font-size:1.25rem; }
+  .case-visual-layout { grid-template-columns:1.05fr .95fr; gap:.45rem; }
+  .case-visual { height:34vh; }
+  .case-material-page .case-visual { height:26vh; }
+  .case-story { padding:.35rem; }
+  .case-story strong { font-size:.9rem; }
+  .case-story p { font-size:.72rem !important; line-height:1.28 !important; }
+  .discussion-questions > div { grid-template-columns:1.35rem 1fr; padding:.28rem; font-size:.7rem; }
+  .discussion-questions b { font-size:1rem; }
+  .case-materials > div { padding:.3rem; }
+  .case-materials strong { font-size:.85rem; }
+  .case-materials span { font-size:.67rem; }
+  .case-analysis-row > div { padding:.3rem; font-size:.75rem; }
+  .answer-location { font-size:.62rem; }
   .law-card { padding:.55rem; }
   .law-card .law-definition { font-size:1.25rem; }
   .law-traits > div { padding:.4rem; }
@@ -1103,12 +1160,25 @@ body.fused-deck .panel ul { margin-top: .55rem; }
   body.fused-deck .topline,body.fused-deck .deck-footer { display:none; }
   body.fused-deck .stage { gap:.3rem; }
   body.fused-deck .kicker { font-size:.65rem; }
+  .page-theme { font-size:1.35rem !important; }
+  .law-check > div { padding:.18rem; font-size:.62rem; line-height:1.18; }
   .question-spine > div,.four-process > div,.method-stack > div { min-height:0; padding:.35rem; }
   .duality .side,.relation-sheet > section,.summary-ledger > div,.dialectic-map .block { padding:.35rem; min-height:0; }
   .case-flow > div { min-height:0; padding:.3rem; }
   .case-flow strong { font-size:.92rem; }
   .case-flow span { font-size:.64rem; }
   .case-questions > div { min-height:0; padding:.35rem .35rem .35rem 1.8rem; }
+  .case-visual { height:31vh; }
+  .case-material-page .case-visual { height:22vh; }
+  .case-story { padding:.18rem; }
+  .case-story strong { font-size:.7rem; }
+  .case-story p { margin:.1rem 0 0; font-size:.5rem !important; line-height:1.12 !important; }
+  .discussion-questions > div { grid-template-columns:1rem 1fr; padding:.16rem; font-size:.56rem; line-height:1.12; }
+  .discussion-questions b { font-size:.78rem; }
+  .discussion-cue { font-size:.56rem !important; }
+  .case-materials strong { font-size:.76rem; }
+  .case-materials span { font-size:.6rem; }
+  .case-analysis-row > div { padding:.25rem; font-size:.68rem; }
   .method-stack strong { font-size:.92rem; }
   .method-stack span { font-size:.66rem; }
   .framework-map > div { min-height:0; padding:.25rem; }
@@ -1205,6 +1275,83 @@ body.history-deck .source-tag { display:none !important; }
 .book-mark .meaning { padding:clamp(1rem,1.8vw,2rem); display:flex; flex-direction:column; justify-content:center; }
 .book-mark .meaning strong { font-size:var(--f-h3); }
 .book-mark .meaning p { margin-top:.7rem; font-size:var(--f-body); }
+.case-study-grid {
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:clamp(.8rem,1.35vw,1.45rem);
+  align-items:stretch;
+}
+.case-block {
+  border-top:7px solid var(--red);
+  border-bottom:2px solid currentColor;
+  padding:clamp(.7rem,1.05vw,1.1rem) 0;
+}
+.case-block h3 { margin:0; font-size:var(--f-h3); }
+.case-block p { margin:.55rem 0 0; font-size:var(--f-compact); line-height:1.38; }
+.evidence-chain {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:3px solid currentColor;
+}
+.evidence-chain > div { padding:clamp(.65rem,1vw,1rem); min-height:23vh; }
+.evidence-chain > div + div { border-left:2px solid currentColor; }
+.evidence-chain strong { display:block; color:var(--red); font-size:clamp(1.55rem,1.72vw,2rem); }
+.evidence-chain span { display:block; margin-top:.45rem; font-size:var(--f-compact); line-height:1.35; }
+.case-conclusion {
+  margin:0;
+  padding:clamp(.65rem,.9vw,.95rem);
+  border-left:10px solid var(--red);
+  background:rgba(213,45,35,.08);
+  font-size:var(--f-compact) !important;
+  line-height:1.38 !important;
+}
+.case-conclusion b { color:var(--red); }
+.case-timeline {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:4px solid currentColor;
+  border-bottom:4px solid currentColor;
+}
+.case-timeline > div { padding:clamp(.7rem,1.05vw,1.05rem); min-height:24vh; min-width:0; overflow-wrap:anywhere; }
+.case-timeline > div + div { border-left:2px solid currentColor; }
+.case-timeline b { display:block; color:var(--red); font-size:clamp(2rem,2.5vw,3rem); }
+.case-timeline strong { display:block; margin-top:.35rem; font-size:clamp(1.5rem,1.65vw,1.95rem); }
+.case-timeline span { display:block; margin-top:.4rem; font-size:clamp(1.3rem,1.32vw,1.58rem); line-height:1.34; }
+.metric-strip {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:3px solid currentColor;
+}
+.metric-strip > div { padding:clamp(.7rem,1.1vw,1.15rem); min-height:18vh; }
+.metric-strip > div + div { border-left:2px solid currentColor; }
+.metric-strip b { display:block; color:var(--red); font-size:clamp(2.8rem,4.2vw,5.1rem); line-height:1; }
+.metric-strip strong { display:block; margin-top:.45rem; font-size:clamp(1.5rem,1.7vw,2rem); }
+.metric-strip span { display:block; margin-top:.3rem; font-size:clamp(1.2rem,1.2vw,1.42rem); line-height:1.3; }
+.mechanism-flow {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:3px solid currentColor;
+  border-bottom:3px solid currentColor;
+}
+.mechanism-flow > div { padding:clamp(.6rem,.9vw,.9rem); min-height:18vh; position:relative; }
+.mechanism-flow > div + div { border-left:2px solid currentColor; }
+.mechanism-flow strong { display:block; color:var(--red); font-size:clamp(1.45rem,1.62vw,1.9rem); }
+.mechanism-flow span { display:block; margin-top:.35rem; font-size:clamp(1.25rem,1.25vw,1.48rem); line-height:1.32; }
+.development-track {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:3px solid currentColor;
+}
+.development-track > div { padding:clamp(.75rem,1.05vw,1.1rem); min-height:25vh; }
+.development-track > div + div { border-left:2px solid currentColor; }
+.development-track .em { background:var(--red); color:#fff; }
+.development-track b { display:block; font-size:clamp(1.2rem,1.2vw,1.45rem); color:var(--red); }
+.development-track .em b { color:#fff; }
+.development-track strong { display:block; margin-top:.4rem; font-size:var(--f-h3); }
+.development-track span { display:block; margin-top:.5rem; font-size:var(--f-compact); line-height:1.34; }
+.tone-red .case-timeline b,
+.tone-red .case-conclusion b { color:#111; }
+.tone-red .case-conclusion { border-left-color:#111; background:rgba(0,0,0,.12); }
 @media (max-width:1100px) {
   .contribution-grid { grid-template-columns:repeat(3,1fr); }
   .contribution-grid > div:nth-child(4) { border-left:0; border-top:2px solid currentColor; }
@@ -1223,12 +1370,24 @@ body.history-deck .source-tag { display:none !important; }
   .practice-cycle .node { min-height:0; padding:.5rem; }
   .practice-cycle .arrow { padding:0 .2rem; font-size:1.2rem; }
   .book-mark { min-height:0; }
+  .case-study-grid { grid-template-columns:.9fr 1.1fr; gap:.45rem; }
+  .case-timeline > div,.metric-strip > div,.mechanism-flow > div,.development-track > div { min-height:0; padding:.35rem; }
+  .metric-strip b { font-size:1.55rem; }
+  .metric-strip strong,.mechanism-flow strong { font-size:.9rem; }
+  .metric-strip span,.mechanism-flow span { font-size:.68rem; line-height:1.2; }
+  .case-conclusion { padding:.38rem; font-size:.76rem !important; line-height:1.24 !important; }
 }
 @media (max-height:500px) {
   .problem-loop > div,.history-line > div,.contribution-grid > div,.idea-grid > div,.practice-cycle .node { min-height:0; }
   .problem-loop > div,.history-line > div { padding:.35rem; }
   .contribution-grid strong { font-size:.9rem; }
   .contribution-grid span { font-size:.68rem; }
+  .case-block { padding:.25rem 0; }
+  .case-block p { font-size:.68rem; line-height:1.2; }
+  .evidence-chain > div,.case-timeline > div,.metric-strip > div,.mechanism-flow > div,.development-track > div { min-height:0; padding:.28rem; }
+  .case-timeline b,.metric-strip b { font-size:1.25rem; }
+  .case-timeline strong,.metric-strip strong,.mechanism-flow strong,.development-track strong { font-size:.82rem; }
+  .case-timeline span,.metric-strip span,.mechanism-flow span,.development-track span { font-size:.62rem; line-height:1.18; }
 }
 
 </style>
@@ -1326,7 +1485,7 @@ body.history-deck .source-tag { display:none !important; }
 </div>
 
 <div class="slides-offset">
-<section class="slide tone-dark" id="slide-0" data-slide-title="理论为什么必须在实践中不断发展" data-teach-minutes="0.5" data-source="教材导论第四、第五节">
+<section class="slide tone-dark" id="slide-0" data-slide-title="理论为什么必须在实践中不断发展" data-teach-minutes="0.5" data-source="导论第四、第五节">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s0-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1348,25 +1507,25 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-1" data-slide-title="贯穿案例：中国为什么选择社会主义市场经济并转向高质量发展" data-teach-minutes="2" data-source="教材P25—32">
+<section class="slide" id="slide-1" data-slide-title="中国发展道路的理论—实践主线" data-teach-minutes="2" data-source="P23—32">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s1-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <h2 class="reveal">同一个中国发展案例，可以检验理论怎样回应实践变化</h2>
-          <div class="problem-loop reveal">
-            <div><strong>生产力怎样发展</strong><span>怎样解放和发展生产力，逐步实现工业化和现代化？</span></div>
-            <div class="fragment"><strong>制度怎样改革</strong><span>怎样把社会主义基本制度同市场机制结合起来？</span></div>
-            <div class="fragment active"><strong>发展怎样转型</strong><span>为什么经济发展要从高速增长转向高质量发展？</span></div>
-            <div class="fragment"><strong>成果为了谁</strong><span>怎样坚持以人民为中心，推动共同富裕和人的全面发展？</span></div>
+          <h2 class="reveal">中国经济实践不断提出新命题，也不断推动理论创新</h2>
+          <div class="development-track reveal">
+            <div><b>革命与建设</b><strong>奠定制度基础</strong><span>民族独立、人民解放和社会主义改造，为发展生产力创造根本制度条件。</span></div>
+            <div class="fragment"><b>改革开放</b><strong>释放发展活力</strong><span>调整不适合生产力发展的体制机制，把社会主义基本制度同市场机制结合。</span></div>
+            <div class="fragment em"><b>进入新时代</b><strong>转向高质量发展</strong><span>从速度规模扩张转向质量、效率、动力变革，更好满足人民美好生活需要。</span></div>
+            <div class="fragment"><b>中国式现代化</b><strong>发展为了人民</strong><span>把共同富裕、绿色发展、发展安全和人的全面发展纳入现代化进程。</span></div>
           </div>
-          <p class="case-question fragment"><b>案例主线：</b>不是先背人物和结论，而是不断追问——新实践提出了什么问题，理论作出了什么回答，回答又怎样接受实践检验。</p></main>
+          <p class="case-conclusion fragment"><b>贯穿主线：</b>理论不是脱离实践的固定结论，而是在回答中国发展问题、总结实践经验和接受实践检验中不断丰富。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s1-footer">政治经济学 · 导论</span><span class="page-no">02 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-2" data-slide-title="理论发展的基本机制" data-teach-minutes="2" data-source="教材P19—32">
+<section class="slide" id="slide-2" data-slide-title="理论发展的基本机制" data-teach-minutes="2" data-source="P19—32">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s2-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1379,12 +1538,12 @@ body.history-deck .source-tag { display:none !important; }
             <div class="arrow">→</div>
             <div class="node"><strong>实践检验</strong><span>在革命、建设、改革和发展实践中检验并继续丰富</span></div>
           </div>
-          <div class="definition-box fragment"><span class="definition-label">重点理解</span><p>马克思主义政治经济学的发展，不是简单增加结论，而是把基本原理同新的历史条件和实践问题相结合。</p><span class="source-ref">教材P19—32</span></div></main>
+          <div class="definition-box fragment"><span class="definition-label">重点理解</span><p>马克思主义政治经济学的发展，不是简单增加结论，而是把基本原理同新的历史条件和实践问题相结合。</p><span class="source-ref">P19—32</span></div></main>
     <footer class="deck-footer"><span data-edit-slot="s2-footer">政治经济学 · 导论</span><span class="page-no">03 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-3" data-slide-title="马克思主义政治经济学怎样创立" data-teach-minutes="3" data-source="教材P19—22 · 官方PPT第30页">
+<section class="slide" id="slide-3" data-slide-title="马克思主义政治经济学怎样创立" data-teach-minutes="3" data-source="P19—22 · 官方PPT第30页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s3-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1392,31 +1551,38 @@ body.history-deck .source-tag { display:none !important; }
     <main class="stage">
           <div class="book-mark reveal">
             <div class="year">1867</div>
-            <div class="meaning"><strong>《资本论》第一卷出版</strong><p>标志着马克思主义政治经济学理论体系的创立。它不是偶然出现，而是长期研究、批判继承和理论创新的结果。</p><span class="source-ref">教材P21；官方PPT第30页</span></div>
+            <div class="meaning"><strong>《资本论》第一卷出版</strong><p>标志着马克思主义政治经济学理论体系的创立。它不是偶然出现，而是长期研究、批判继承和理论创新的结果。</p><span class="source-ref">P21；官方PPT第30页</span></div>
           </div>
-          <p class="case-question fragment"><b>创立所回答的问题：</b>资本和劳动的关系是什么？资本主义财富增长为什么同时伴随矛盾积累？</p></main>
+          <p class="case-question fragment"><b>核心矛盾：</b>《资本论》以资本和劳动的关系为中心，解释资本主义财富增长为何同时伴随剩余价值生产、资本积累和社会矛盾发展。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s3-footer">政治经济学 · 导论</span><span class="page-no">04 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-4" data-slide-title="从现实调查到《资本论》" data-teach-minutes="3" data-source="教材P19—21">
+<section class="slide" id="slide-4" data-slide-title="历史案例：《资本论》怎样从现实材料中形成理论" data-teach-minutes="3" data-source="P19—21">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s4-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="history-line reveal">
-            <div><b>1843—1844</b><strong>转向经济研究</strong><span>在社会现实问题中认识到，法和国家关系必须从物质生活关系中解释。</span></div>
-            <div class="fragment"><b>1844—1857</b><strong>批判与积累</strong><span>研读经济学文献，形成大量笔记和手稿，研究对象与方法逐步清晰。</span></div>
-            <div class="fragment"><b>1859</b><strong>第一次系统呈现</strong><span>《政治经济学批判。第一分册》公开出版。</span></div>
-            <div class="fragment"><b>1867</b><strong>体系创立</strong><span>《资本论》第一卷揭示资本主义生产方式的内在规律。</span></div>
+          <h2 class="reveal">工厂调查、经济危机和工人处境，是理论研究面对的真实历史现场</h2>
+          <div class="case-study-grid reveal">
+            <section class="case-block">
+              <h3>历史材料</h3>
+              <p>马克思长期研读英国议会“蓝皮书”、工厂视察员报告、统计资料和经济学文献，并持续观察机器大工业、劳动日延长、周期性危机和工人生活状况。</p>
+              <p>这些材料使“财富增长”不再只是表面繁荣，而成为分析资本与劳动关系的现实入口。</p>
+            </section>
+            <div class="evidence-chain">
+              <div><strong>现实材料</strong><span>劳动日、工资、机器使用、危机和工厂制度</span></div>
+              <div class="fragment"><strong>科学抽象</strong><span>从纷繁事实中抽取商品、价值、资本和剩余价值等范畴</span></div>
+              <div class="fragment"><strong>理论体系</strong><span>揭示资本主义生产方式的本质关系、运动规律和历史趋势</span></div>
+            </div>
           </div>
-          <p class="focus-strip fragment"><b>方法线索：</b>理论创立来自长期材料研究、现实调查与科学抽象，而不是从既有结论出发寻找例证。 <span class="source-ref">教材P19—21</span></p></main>
+          <p class="case-conclusion fragment"><b>理论意义：</b>科学理论必须从真实社会关系和劳动者处境出发，通过调查研究与科学抽象揭示现象背后的本质。 <span class="source-ref">P19—21</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s4-footer">政治经济学 · 导论</span><span class="page-no">05 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-5" data-slide-title="马克思和恩格斯的开创性贡献" data-teach-minutes="4" data-source="教材P21—22 · 官方PPT第31页">
+<section class="slide" id="slide-5" data-slide-title="马克思和恩格斯的开创性贡献" data-teach-minutes="4" data-source="P21—22 · 官方PPT第31页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s5-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1429,12 +1595,12 @@ body.history-deck .source-tag { display:none !important; }
             <div class="fragment"><strong>资本运动规律</strong><span>系统分析生产、流通和资本主义生产总过程。</span></div>
             <div class="fragment"><strong>历史趋势</strong><span>说明资本主义的历史性，并预见未来社会的基本特征。</span></div>
           </div>
-          <p class="micro-note">教材规范判断：马克思批判继承古典政治经济学的科学成分，克服其阶级和历史局限，完成政治经济学发展史上的伟大革命。 <span class="source-ref">教材P21—22</span></p></main>
+          <p class="micro-note"><b>核心结论：</b>马克思批判继承古典政治经济学的科学成分，克服其阶级和历史局限，完成政治经济学发展史上的伟大革命。 <span class="source-ref">P21—22</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s5-footer">政治经济学 · 导论</span><span class="page-no">06 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-6" data-slide-title="列宁怎样回答垄断资本主义和革命实践的新问题" data-teach-minutes="3" data-source="教材P22—23 · 官方PPT第32—33页">
+<section class="slide" id="slide-6" data-slide-title="列宁怎样回答垄断资本主义和革命实践的新问题" data-teach-minutes="3" data-source="P22—23 · 官方PPT第32—33页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s6-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1444,12 +1610,12 @@ body.history-deck .source-tag { display:none !important; }
             <section class="redline"><div class="kicker">新的资本主义阶段</div><h3>帝国主义理论</h3><p>分析垄断组织、金融资本、资本输出和国际垄断同盟，揭示垄断资本主义的内在矛盾和发展不平衡。</p></section>
             <section><div class="kicker">新的革命与建设实践</div><h3>过渡与建设理论</h3><p>根据俄国实际探索社会主义革命、从资本主义向社会主义过渡以及社会主义经济建设道路。</p></section>
           </div>
-          <p class="focus-strip fragment"><b>发展方式：</b>列宁坚持马克思主义基本原理，同时针对资本主义新阶段和社会主义实践提出新的理论回答。 <span class="source-ref">教材P22—23</span></p></main>
+          <p class="focus-strip fragment"><b>发展方式：</b>列宁坚持马克思主义基本原理，同时针对资本主义新阶段和社会主义实践提出新的理论回答。 <span class="source-ref">P22—23</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s6-footer">政治经济学 · 导论</span><span class="page-no">07 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-7" data-slide-title="苏联社会主义建设时期进行了哪些探索" data-teach-minutes="3" data-source="教材P23 · 官方PPT第34页">
+<section class="slide" id="slide-7" data-slide-title="苏联社会主义建设时期进行了哪些探索" data-teach-minutes="3" data-source="P23 · 官方PPT第34页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s7-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1463,29 +1629,37 @@ body.history-deck .source-tag { display:none !important; }
             <div class="fragment"><strong>理论教材</strong><span>推动社会主义政治经济学体系化表达。</span></div>
             <div class="fragment"><strong>苏联模式</strong><span>形成集中配置资源的体制，也需放回具体历史条件中认识。</span></div>
           </div>
-          <p class="micro-note">重点不是记住名词清单，而是理解第一次大规模社会主义建设怎样提出全新的经济理论问题。</p></main>
+          <p class="micro-note"><b>历史认识：</b>第一次大规模社会主义建设实践，集中提出了工业化、农业组织、计划与价值规律以及资源配置方式等全新理论问题。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s7-footer">政治经济学 · 导论</span><span class="page-no">08 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-8" data-slide-title="毛泽东思想怎样回答中国革命的经济问题" data-teach-minutes="3" data-source="教材P23—25 · 官方PPT第35—36页">
+<section class="slide" id="slide-8" data-slide-title="历史案例：陕甘宁边区怎样以发展生产保障民生" data-teach-minutes="3" data-source="P23—25 · 官方PPT第35—36页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s8-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="concept-ledger reveal">
-            <div>经济基础</div><div>重视根据地经济建设，把发展生产、保障供给作为经济工作和财政工作的方针。</div>
-            <div>革命任务</div><div>既反对封建主义土地制度，也反对帝国主义和官僚资本主义压迫。</div>
-            <div>经济结构</div><div>提出多种经济成分并存、国营经济发挥领导作用的认识。</div>
-            <div>发展道路</div><div>把马克思列宁主义基本原理同中国革命具体实际结合。</div>
+          <h2 class="reveal">“发展经济，保障供给”把经济建设同人民生活和革命全局联系起来</h2>
+          <div class="case-study-grid reveal">
+            <section class="case-block">
+              <h3>历史背景</h3>
+              <p>抗日战争进入困难时期后，陕甘宁边区面对物资短缺和财政经济压力。单纯依赖外部供给无法支撑长期斗争，必须立足自身条件组织生产。</p>
+              <p>边区发动军民开展大生产，发展农业、手工业和公营经济，并改进财政金融和贸易工作。</p>
+            </section>
+            <div class="mechanism-flow">
+              <div><strong>现实困难</strong><span>物资短缺、供给压力与长期斗争需要</span></div>
+              <div class="fragment"><strong>组织生产</strong><span>军民参与、因地制宜，扩大农业和手工业生产</span></div>
+              <div class="fragment"><strong>保障民生</strong><span>改善供给，减轻人民负担，稳定边区经济</span></div>
+              <div class="fragment"><strong>服务全局</strong><span>经济工作服从人民利益和革命建设的总体目标</span></div>
+            </div>
           </div>
-          <p class="case-question fragment"><b>中国问题：</b>怎样在经济文化落后的大国完成民族独立、人民解放，并为发展生产力创造制度条件？</p></main>
+          <p class="case-conclusion fragment"><b>理论意义：</b>把马克思主义基本原理同中国具体实际结合，经济建设既要发展生产力，也要服务人民需要和社会整体目标。 <span class="source-ref">P23—25</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s8-footer">政治经济学 · 导论</span><span class="page-no">09 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-9" data-slide-title="毛泽东思想怎样探索社会主义改造和建设" data-teach-minutes="3" data-source="教材P24—25">
+<section class="slide" id="slide-9" data-slide-title="毛泽东思想怎样探索社会主义改造和建设" data-teach-minutes="3" data-source="P24—25">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s9-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1497,12 +1671,12 @@ body.history-deck .source-tag { display:none !important; }
             <div><strong>统筹经济关系</strong><span>围绕《论十大关系》等探索农业、工业、中央与地方及国内外关系。</span></div>
             <div><strong>借鉴与独立探索</strong><span>借鉴苏联经验，同时强调走适合中国国情的社会主义建设道路。</span></div>
           </div>
-          <p class="focus-strip fragment"><b>理论贡献：</b>中国社会主义革命和建设实践，使马克思主义政治经济学开始形成具有中国问题意识的原创性成果。 <span class="source-ref">教材P24—25</span></p></main>
+          <p class="focus-strip fragment"><b>理论贡献：</b>中国社会主义革命和建设实践，使马克思主义政治经济学开始形成具有中国问题意识的原创性成果。 <span class="source-ref">P24—25</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s9-footer">政治经济学 · 导论</span><span class="page-no">10 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-dark" id="slide-10" data-slide-title="模块小结：理论发展始终由新的实践条件推动" data-teach-minutes="2" data-source="教材P19—25">
+<section class="slide tone-dark" id="slide-10" data-slide-title="模块小结：理论发展始终由新的实践条件推动" data-teach-minutes="2" data-source="P19—25">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s10-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1518,25 +1692,25 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-red" id="slide-11" data-slide-title="案例转折：为什么改革开放需要新的政治经济学回答" data-teach-minutes="3" data-source="教材P25—28">
+<section class="slide tone-red" id="slide-11" data-slide-title="历史案例：从小岗村到社会主义市场经济体制" data-teach-minutes="3" data-source="P25—28 · 中国人大网、国务院公开资料">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s11-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <h2 class="reveal">发展生产力的制度条件发生变化：改革不是绕开社会主义，而是探索社会主义怎样更有活力</h2>
-          <div class="case-questions reveal">
-            <div>社会主义的本质和根本任务是什么？</div>
-            <div class="fragment">中国处于什么发展阶段，改革的现实起点在哪里？</div>
-            <div class="fragment">计划与市场能否成为社会主义经济都可以使用的调节手段？</div>
-            <div class="fragment">怎样在改革、发展和稳定之间形成制度化安排？</div>
+          <h2 class="reveal">生产关系的调整，必须以解放和发展生产力为检验标准</h2>
+          <div class="case-timeline reveal">
+            <div><b>1978</b><strong>小岗村探索</strong><span>18户农民按下红手印，实行包干到户，农村改革从基层实践中破题。</span></div>
+            <div class="fragment"><b>1982</b><strong>政策确认</strong><span>中央文件肯定包产到户、包干到户是社会主义集体经济的生产责任制。</span></div>
+            <div class="fragment"><b>1992</b><strong>理论突破</strong><span>党的十四大明确我国经济体制改革的目标是建立社会主义市场经济体制。</span></div>
+            <div class="fragment"><b>1993</b><strong>制度框架</strong><span>十四届三中全会对社会主义市场经济体制的基本框架作出系统部署。</span></div>
           </div>
-          <p class="focus-strip fragment"><b>案例主线：</b>社会主义市场经济体制，是基本原理同中国改革开放实践结合形成的重大理论和制度创新。</p></main>
+          <p class="case-conclusion fragment"><b>政治经济学认识：</b>改革是社会主义制度的自我完善和发展；通过调整不适合生产力发展的体制机制，把公有制主体地位、共同富裕方向与市场配置资源的作用结合起来。 <span class="source-ref">P25—28</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s11-footer">政治经济学 · 导论</span><span class="page-no">12 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-12" data-slide-title="中国特色社会主义理论体系怎样形成" data-teach-minutes="3" data-source="教材P25—28 · 官方PPT第37—41页">
+<section class="slide" id="slide-12" data-slide-title="中国特色社会主义理论体系怎样形成" data-teach-minutes="3" data-source="P25—28 · 官方PPT第37—41页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s12-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1552,7 +1726,7 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-13" data-slide-title="邓小平理论实现了哪些重要突破" data-teach-minutes="3" data-source="教材P25—27">
+<section class="slide" id="slide-13" data-slide-title="邓小平理论实现了哪些重要突破" data-teach-minutes="3" data-source="P25—27">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s13-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1566,12 +1740,12 @@ body.history-deck .source-tag { display:none !important; }
             <div class="fragment"><strong>基本经济制度</strong><span>坚持公有制为主体，同时发展多种所有制经济。</span></div>
             <div class="fragment"><strong>发展战略</strong><span>围绕现代化建设形成分阶段推进的发展安排。</span></div>
           </div>
-          <p class="micro-note">教材P26—27：改革开放实践形成了马克思主义基本原理同中国具体实际结合的中国特色社会主义政治经济学。</p></main>
+          <p class="micro-note">P26—27：改革开放实践形成了马克思主义基本原理同中国具体实际结合的中国特色社会主义政治经济学。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s13-footer">政治经济学 · 导论</span><span class="page-no">14 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-14" data-slide-title="“三个代表”重要思想和科学发展观继续回答什么" data-teach-minutes="3" data-source="教材P26—28">
+<section class="slide" id="slide-14" data-slide-title="“三个代表”重要思想和科学发展观继续回答什么" data-teach-minutes="3" data-source="P26—28">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s14-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1581,12 +1755,12 @@ body.history-deck .source-tag { display:none !important; }
             <section class="redline"><h3>“三个代表”重要思想</h3><p>深化对社会主义市场经济条件下所有制、分配制度和改革开放的认识，推动社会主义市场经济体制不断完善。</p><div class="judgment">重点回答在新的国内外条件下怎样坚持和发展中国特色社会主义。</div></section>
             <section><h3>科学发展观</h3><p>强调以人为本、全面协调可持续发展，推进社会公平正义、保障改善民生和经济社会协调发展。</p><div class="judgment">重点回答实现什么样的发展、怎样发展。</div></section>
           </div>
-          <p class="case-question fragment"><b>案例推进：</b>市场机制提高资源配置活力以后，发展还必须回答公平、协调、可持续和社会整体利益问题。</p></main>
+          <p class="case-question fragment"><b>发展要求：</b>市场机制提高资源配置活力以后，经济发展还必须统筹公平、协调、可持续和社会整体利益。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s14-footer">政治经济学 · 导论</span><span class="page-no">15 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-15" data-slide-title="中国特色社会主义政治经济学的贡献（一）" data-teach-minutes="3" data-source="教材P25—28">
+<section class="slide" id="slide-15" data-slide-title="中国特色社会主义政治经济学的贡献（一）" data-teach-minutes="3" data-source="P25—28">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s15-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1602,7 +1776,7 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-16" data-slide-title="中国特色社会主义政治经济学的贡献（二）" data-teach-minutes="3" data-source="教材P27—28">
+<section class="slide" id="slide-16" data-slide-title="中国特色社会主义政治经济学的贡献（二）" data-teach-minutes="3" data-source="P27—28">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s16-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1614,35 +1788,41 @@ body.history-deck .source-tag { display:none !important; }
             <div><strong>经济管理和宏观调控</strong><span>在发挥市场作用的同时加强国家治理，统筹发展与稳定、局部与整体、当前与长远。</span></div>
             <div><strong>社会主义经济发展</strong><span>坚持以人为本和全面协调可持续发展，推动结构优化和现代化建设。</span></div>
           </div>
-          <p class="focus-strip fragment"><b>整体意义：</b>这些成果不是经典作家结论的简单重复，而是对中国改革开放实践的系统理论概括。 <span class="source-ref">教材P28</span></p></main>
+          <p class="focus-strip fragment"><b>整体意义：</b>这些成果不是经典作家结论的简单重复，而是对中国改革开放实践的系统理论概括。 <span class="source-ref">P28</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s16-footer">政治经济学 · 导论</span><span class="page-no">17 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-17" data-slide-title="新时代为什么需要新的经济理论概括" data-teach-minutes="3" data-source="教材P29—30">
+<section class="slide" id="slide-17" data-slide-title="思政案例：脱贫攻坚怎样体现以人民为中心" data-teach-minutes="3" data-source="P29—30 · 国务院公报2021年第7号">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s17-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="case-question reveal"><b>案例继续：</b>社会主义市场经济体制释放了发展活力，但发展阶段、发展环境和发展条件发生深刻变化，新的问题不能只用“增长更快”回答。</div>
-          <div class="problem-loop reveal">
-            <div><strong>发展质量</strong><span>从高速增长转向高质量发展，动力、效率和质量怎样变革？</span></div>
-            <div class="fragment"><strong>主要矛盾</strong><span>怎样满足人民日益增长的美好生活需要？</span></div>
-            <div class="fragment active"><strong>内外循环</strong><span>怎样增强国内大循环内生动力并提高开放水平？</span></div>
-            <div class="fragment"><strong>发展安全</strong><span>怎样统筹发展和安全，应对风险挑战？</span></div>
-          </div></main>
+          <h2 class="reveal">人民立场要转化为可实施、可检验的发展实践</h2>
+          <div class="metric-strip reveal">
+            <div><b>9899万</b><strong>农村贫困人口全部脱贫</strong><span>现行标准下贫困人口如期摆脱贫困</span></div>
+            <div class="fragment"><b>832个</b><strong>贫困县全部摘帽</strong><span>区域性整体贫困问题得到解决</span></div>
+            <div class="fragment"><b>12.8万</b><strong>贫困村全部出列</strong><span>发展成果覆盖最需要帮扶的地区和群众</span></div>
+          </div>
+          <div class="mechanism-flow fragment">
+            <div><strong>党的领导</strong><span>形成统一目标、责任体系和组织动员能力</span></div>
+            <div><strong>精准方略</strong><span>因户因村施策，把有限资源配置到关键环节</span></div>
+            <div><strong>协同投入</strong><span>产业、就业、教育、医疗和社会保障共同发力</span></div>
+            <div><strong>人民检验</strong><span>以群众获得感和实际生活改善检验发展成效</span></div>
+          </div>
+          <p class="case-conclusion fragment"><b>理论意义：</b>社会主义生产目的体现为不断满足人民日益增长的美好生活需要，发展成果必须更多更公平惠及全体人民。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s17-footer">政治经济学 · 导论</span><span class="page-no">18 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-18" data-slide-title="习近平新时代中国特色社会主义经济思想怎样形成" data-teach-minutes="3" data-source="教材P29—31 · 官方PPT第42—43页">
+<section class="slide" id="slide-18" data-slide-title="习近平新时代中国特色社会主义经济思想怎样形成" data-teach-minutes="3" data-source="P29—31 · 官方PPT第42—43页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s18-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="definition-box reveal"><span class="definition-label">教材定位</span><p><b>习近平新时代中国特色社会主义经济思想</b>是习近平新时代中国特色社会主义思想不可或缺的重要组成部分，是中国特色社会主义政治经济学的最新成果。</p><span class="source-ref">教材P29；官方PPT第42—43页</span></div>
+          <div class="definition-box reveal"><span class="definition-label">理论定位</span><p><b>习近平新时代中国特色社会主义经济思想</b>是习近平新时代中国特色社会主义思想不可或缺的重要组成部分，是中国特色社会主义政治经济学的最新成果。</p><span class="source-ref">P29；官方PPT第42—43页</span></div>
           <div class="relation-sheet fragment">
             <section class="redline"><h3>实践基础</h3><p>党的十八大以来经济发展的新实践、新成就、新问题与新挑战。</p></section>
             <section><h3>时代课题</h3><p>新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义。</p></section>
@@ -1652,7 +1832,7 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-19" data-slide-title="推动经济发展实践的理论结晶（一）" data-teach-minutes="4" data-source="教材P30 · 官方PPT第44—45页">
+<section class="slide" id="slide-19" data-slide-title="推动经济发展实践的理论结晶（一）" data-teach-minutes="4" data-source="P30 · 官方PPT第44—45页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s19-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1670,7 +1850,7 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-20" data-slide-title="推动经济发展实践的理论结晶（二）" data-teach-minutes="4" data-source="教材P30—31 · 官方PPT第46—47页">
+<section class="slide" id="slide-20" data-slide-title="推动经济发展实践的理论结晶（二）" data-teach-minutes="4" data-source="P30—31 · 官方PPT第46—47页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s20-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1688,25 +1868,30 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-21" data-slide-title="原创性贡献怎样转化为新的规律性认识" data-teach-minutes="4" data-source="教材P31—32 · 官方PPT第48—49页">
+<section class="slide" id="slide-21" data-slide-title="现实案例：新能源汽车产业怎样体现高质量发展" data-teach-minutes="4" data-source="P30—32 · 国家统计局2024年数据">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s21-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="stage-matrix reveal">
-            <div class="head">实践主张</div><div class="head">深化的理论认识</div><div class="head">政治经济学意义</div>
-            <div class="stage-name">党的领导、人民中心</div><div>社会主义经济本质与生产目的</div><div>回答经济发展由谁领导、为了谁</div>
-            <div class="stage-name">新发展理念、高质量发展</div><div>发展规律与阶段性特征</div><div>回答发展方式、动力和质量怎样转变</div>
-            <div class="stage-name">基本制度、市场与政府</div><div>制度内涵与资源配置机制</div><div>回答社会主义制度与市场机制怎样结合</div>
-            <div class="stage-name">新发展格局、开放、安全</div><div>经济循环、全球化与国家治理</div><div>回答复杂环境下怎样统筹国内国际与发展安全</div>
+          <h2 class="reveal">从“生产更多”转向“创新更强、结构更优、绿色更深”</h2>
+          <div class="metric-strip reveal">
+            <div><b>1316.8万</b><strong>2024年新能源汽车产量</strong><span>我国成为全球首个年产量超过千万辆的国家</span></div>
+            <div class="fragment"><b>+38.7%</b><strong>较上年增长</strong><span>绿色消费和新产业需求形成新的增长空间</span></div>
+            <div class="fragment"><b>连续10年</b><strong>产量位居全球首位</strong><span>产业链、市场规模和技术迭代形成协同优势</span></div>
           </div>
-          <p class="micro-note">教材P31—32：这些观点以全新视野深化了对社会主义建设规律、社会经济发展规律的认识。</p></main>
+          <div class="mechanism-flow fragment">
+            <div><strong>创新驱动</strong><span>动力电池、智能网联和制造技术持续迭代</span></div>
+            <div><strong>产业协同</strong><span>材料、零部件、整车、充电设施形成完整链条</span></div>
+            <div><strong>绿色转型</strong><span>绿色生产与绿色消费共同塑造新增长点</span></div>
+            <div><strong>市场与政府</strong><span>市场竞争配置资源，规划、标准和基础设施提供支撑</span></div>
+          </div>
+          <p class="case-conclusion fragment"><b>理论联系：</b>新发展理念、高质量发展、现代化产业体系以及市场与政府关系，在同一产业实践中形成相互联系的解释框架。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s21-footer">政治经济学 · 导论</span><span class="page-no">22 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-22" data-slide-title="理论必须在实践中继续坚持和发展" data-teach-minutes="3" data-source="教材P32—33 · 官方PPT第50页">
+<section class="slide" id="slide-22" data-slide-title="理论必须在实践中继续坚持和发展" data-teach-minutes="3" data-source="P32—33 · 官方PPT第50页">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s22-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1719,12 +1904,12 @@ body.history-deck .source-tag { display:none !important; }
             <div class="arrow">→</div>
             <div class="node"><strong>实践检验发展</strong><span>理论指导新的实践，并在新的实践成就和问题中继续丰富</span></div>
           </div>
-          <p class="case-question fragment"><b>案例回答：</b>社会主义市场经济和高质量发展不是相互割裂的结论，而是中国在不同发展条件下持续解放生产力、完善制度并满足人民需要的理论—实践过程。</p></main>
+          <p class="case-question fragment"><b>本单元结论：</b>社会主义市场经济和高质量发展不是相互割裂的结论，而是中国在不同发展条件下持续解放生产力、完善制度并满足人民需要的理论—实践过程。</p></main>
     <footer class="deck-footer"><span data-edit-slot="s22-footer">政治经济学 · 导论</span><span class="page-no">23 / 25</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-blue" id="slide-23" data-slide-title="本单元知识框架与核心结论" data-teach-minutes="3" data-source="教材P19—33">
+<section class="slide tone-blue" id="slide-23" data-slide-title="本单元知识框架与核心结论" data-teach-minutes="3" data-source="P19—33">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s23-lesson">导论 · 理论创立、发展与最新成果</span>
@@ -1744,16 +1929,16 @@ body.history-deck .source-tag { display:none !important; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide tone-red" id="slide-24" data-slide-title="章后思考题" data-teach-minutes="1" data-source="教材导论思考题第5、6题 · 教材P33">
+<section class="slide tone-red" id="slide-24" data-slide-title="章后思考题" data-teach-minutes="1" data-source="导论思考题第5、6题 · P33">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s24-lesson">导论 · 理论创立、发展与最新成果</span>
     </header>
     <main class="stage">
-          <div class="kicker reveal">严格依据教材正文整理答案</div>
+          <h2 class="page-theme reveal">章后思考</h2>
           <div class="homework reveal">
-            <article><div class="q">1. 试述中国特色社会主义政治经济学对马克思主义政治经济学的丰富和发展。</div><div class="hint">教材阅读范围：P23—28<br>关键词：毛泽东思想、改革开放、社会主义本质、初级阶段、社会主义市场经济、基本经济制度</div></article>
-            <article class="fragment"><div class="q">2. 习近平新时代中国特色社会主义经济思想的原创性贡献表现在哪些方面？</div><div class="hint">教材阅读范围：P29—32<br>关键词：党的领导、人民中心、新发展理念、高质量发展、基本经济制度、市场与政府、新发展格局</div></article>
+            <article><div class="q">1. 试述中国特色社会主义政治经济学对马克思主义政治经济学的丰富和发展。</div><div class="hint">P23—28<br>关键词：毛泽东思想、改革开放、社会主义本质、初级阶段、社会主义市场经济、基本经济制度</div></article>
+            <article class="fragment"><div class="q">2. 习近平新时代中国特色社会主义经济思想的原创性贡献表现在哪些方面？</div><div class="hint">P29—32<br>关键词：党的领导、人民中心、新发展理念、高质量发展、基本经济制度、市场与政府、新发展格局</div></article>
           </div></main>
     <footer class="deck-footer"><span data-edit-slot="s24-footer">政治经济学 · 导论</span><span class="page-no">25 / 25</span></footer>
   </div>
