@@ -1658,7 +1658,34 @@ img, .image-container {
     --deck-chrome-shadow: 0 12px 36px rgba(18,27,94,.14);
     --deck-chrome-surface: rgba(236,232,219,.98);
   }
-  body { font-family: var(--font-body); color: var(--graphite); }
+  body { font-family: var(--font-body); color: var(--graphite); overflow: hidden !important; }
+  /* The editable preset runtime defaults to a vertical scroll document and
+     marks every direct slide visible with !important.  This course deck uses
+     one-slide-at-a-time projection, so restore the stage/slide contract after
+     the runtime CSS. */
+  #deck.slides-offset {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+  }
+  #deck.slides-offset > section.slide {
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: 2;
+  }
+  #deck.slides-offset > section.slide.active,
+  #deck.slides-offset > section.slide.is-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 3;
+  }
   .disp, .s-cover .title, .s-chapter .ttl, .s-manifesto .stmt { font-family: var(--font-display); font-style: normal; }
   .micro, .mono, .pagenum { font-family: var(--font-mono); }
   .stage::before { background-size: clamp(34px, 3.2vw, 62px) clamp(34px, 3.2vw, 62px); }
@@ -5552,14 +5579,18 @@ img, .image-container {
     const targetIndex = Math.max(0, Math.min(all.length - 1, index + delta));
     const target = all[targetIndex];
     if (!target || target === slide) return;
-    all.forEach((item, i) => {
-      item.classList.toggle('active', i === targetIndex);
-      item.classList.toggle('is-active', i === targetIndex);
-    });
-    const bar = document.getElementById('progressBar');
-    if (bar) bar.style.width = ((targetIndex + 1) / all.length * 100) + '%';
-    document.querySelectorAll('#navDots button').forEach((dot, i) => dot.classList.toggle('active', i === targetIndex));
-    activate(target);
+    /* Route every navigation source through SlideDeck.goTo via its dot
+       buttons. This keeps the editable runtime's current index, progress bar,
+       keyboard, wheel and course-step controller in one synchronized state. */
+    const dot = document.querySelectorAll('#navDots button')[targetIndex];
+    if (dot) dot.click();
+    else {
+      all.forEach((item, i) => {
+        item.classList.toggle('active', i === targetIndex);
+        item.classList.toggle('is-active', i === targetIndex);
+      });
+      activate(target);
+    }
   }
 
   slides().forEach(setup);
@@ -5611,7 +5642,7 @@ img, .image-container {
 
   document.addEventListener('click', (event) => {
     if (document.body.classList.contains('deck-edit-mode')) return;
-    if (!event.target.closest('.course-inner') || event.target.closest('a,button,input,textarea,[contenteditable="true"]')) return;
+    if (!event.target.closest('.course-slide') || event.target.closest('a,button,input,textarea,[contenteditable="true"]')) return;
     event.preventDefault();
     if (!revealNext(current())) goRelative(1);
   }, true);
