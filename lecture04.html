@@ -1789,6 +1789,24 @@ img, .image-container {
   .chapter-map > div { border-top:clamp(5px,.5vw,8px) solid var(--accent); background:rgba(255,255,255,.46); padding:clamp(.7rem,1.15vw,1.1rem); min-height:clamp(110px,16vh,165px); }
   .chapter-map strong { display:block; color:var(--ink); font-size:clamp(1.12rem,1.75vw,1.8rem); margin-bottom:.4rem; }
   .chapter-map span { font-size:clamp(.98rem,1.35vw,1.4rem); line-height:1.45; }
+  .chapter-balanced .course-inner { padding-right:var(--slide-pad-x); gap:clamp(.65rem,1.35vh,1rem); }
+  .chapter-balanced-head { display:grid; grid-template-columns:minmax(0,.9fr) minmax(360px,1.1fr); gap:clamp(1.2rem,3vw,3rem); align-items:center; width:min(100%,1420px); }
+  .chapter-balanced-copy { min-width:0; }
+  .chapter-balanced .chapter-title { font-size:clamp(2.7rem,4.8vw,5.5rem); max-width:11ch; }
+  .chapter-balanced .chapter-lede { margin:.7rem 0 0; max-width:42ch; font-size:clamp(1.05rem,1.55vw,1.55rem); line-height:1.48; }
+  .chapter-balanced .chapter-map { width:min(100%,1420px); }
+  .chapter-balanced .chapter-map > div { min-height:clamp(104px,14vh,145px); }
+  .chapter-diagram { border:2px solid var(--ink); background:rgba(255,255,255,.5); padding:clamp(1rem,1.7vw,1.6rem); min-height:clamp(190px,26vh,250px); display:flex; flex-direction:column; justify-content:center; }
+  .diagram-kicker { color:var(--accent); font-family:var(--font-mono); font-size:clamp(.9rem,1.1vw,1.1rem); margin-bottom:clamp(.65rem,1vh,.9rem); }
+  .dual-diagram-row { display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(.6rem,1vw,1rem); align-items:stretch; }
+  .dual-diagram-row > div { border:1.5px solid var(--ink-soft); background:var(--paper); padding:clamp(.8rem,1.2vw,1.15rem); display:flex; flex-direction:column; justify-content:center; }
+  .dual-diagram-row strong { color:var(--ink); font-size:clamp(1.35rem,2vw,2rem); }
+  .dual-diagram-row span { margin-top:.35rem; font-size:clamp(.9rem,1.18vw,1.18rem); line-height:1.4; }
+  .dual-diagram-row b { align-self:center; color:var(--accent); font-size:clamp(2rem,3vw,3.2rem); }
+  .chapter-diagram-note { margin:.8rem 0 0; color:var(--graphite); font-size:clamp(.92rem,1.22vw,1.22rem); line-height:1.45; }
+  .metric-flow { display:grid; grid-template-columns:1fr auto 1.12fr auto 1.15fr; gap:clamp(.4rem,.8vw,.8rem); align-items:center; }
+  .metric-flow > div { border:1.5px solid var(--ink-soft); background:var(--paper); padding:clamp(.7rem,1vw,1rem); min-height:clamp(74px,10vh,96px); display:flex; align-items:center; justify-content:center; text-align:center; font-size:clamp(.95rem,1.25vw,1.28rem); line-height:1.35; }
+  .metric-flow b { color:var(--accent); font-size:clamp(1.5rem,2.2vw,2.2rem); }
 
   /* === LAYOUT PATTERNS === */
   .split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(1.2rem,3vw,3.4rem); flex:1; min-height:0; align-items:center; }
@@ -2147,14 +2165,25 @@ img, .image-container {
   <div class="pagenum" data-edit-slot="s11-slot-3" data-slot-type="metric" data-slot-label="12 / 48" data-slot-locked-layout="true" >12 / 48</div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide hairlines course-slide chapter-slide" id="slide-12" data-template-slide-index="13">
-  <div class="course-inner"><div class="chapter-num" data-edit-slot="s12-slot-1" data-slot-type="text" data-slot-label="02" data-slot-locked-layout="true" >02</div><h2 class="chapter-title" data-edit-slot="s12-slot-2" data-slot-type="text" data-slot-label="为什么商品必须从两个方面理解" data-slot-locked-layout="true" >为什么商品必须从两个方面理解</h2><p class="chapter-lede" data-edit-slot="s12-slot-3" data-slot-type="text" data-slot-label="有用性使产品能够进入消费；价值使不同商品能够在交换中进行社会比较。二者统一在同一商品中，又在交换中作相反运动。" data-slot-locked-layout="true" >有用性使产品能够进入消费；价值使不同商品能够在交换中进行社会比较。二者统一在同一商品中，又在交换中作相反运动。</p><div class="chapter-map">
-      <div><strong data-edit-slot="s12-slot-4" data-slot-type="text" data-slot-label="自然属性 → 使用价值" data-slot-locked-layout="true" >自然属性 → 使用价值</strong><span data-edit-slot="s12-slot-5" data-slot-type="text" data-slot-label="回答商品“有什么用”，构成价值存在的物质承担者。" data-slot-locked-layout="true" >回答商品“有什么用”，构成价值存在的物质承担者。</span></div>
-      <div><strong data-edit-slot="s12-slot-6" data-slot-type="text" data-slot-label="数量比例 → 交换价值" data-slot-locked-layout="true" >数量比例 → 交换价值</strong><span data-edit-slot="s12-slot-7" data-slot-type="text" data-slot-label="回答不同使用价值“怎样交换”，是价值的外在表现形式。" data-slot-locked-layout="true" >回答不同使用价值“怎样交换”，是价值的外在表现形式。</span></div>
-      <div><strong data-edit-slot="s12-slot-8" data-slot-type="text" data-slot-label="社会内容 → 价值" data-slot-locked-layout="true" >社会内容 → 价值</strong><span data-edit-slot="s12-slot-9" data-slot-type="text" data-slot-label="回答商品“为什么可比”，指向无差别一般人类劳动的凝结。" data-slot-locked-layout="true" >回答商品“为什么可比”，指向无差别一般人类劳动的凝结。</span></div>
+<section class="slide hairlines course-slide chapter-slide chapter-balanced" id="slide-12" data-template-slide-index="13">
+  <div class="course-inner"><div class="chapter-balanced-head">
+      <div class="chapter-balanced-copy"><div class="chapter-num" data-edit-slot="s12-slot-1" data-slot-type="text" data-slot-label="02" data-slot-locked-layout="true" >02</div><h2 class="chapter-title" data-edit-slot="s12-slot-2" data-slot-type="text" data-slot-label="为什么商品必须从两个方面理解" data-slot-locked-layout="true" >为什么商品必须从两个方面理解</h2><p class="chapter-lede" data-edit-slot="s12-slot-3" data-slot-type="text" data-slot-label="有用性使产品能够进入消费；价值使不同商品能够在交换中进行社会比较。二者统一在同一商品中，又在交换中作相反运动。" data-slot-locked-layout="true" >有用性使产品能够进入消费；价值使不同商品能够在交换中进行社会比较。二者统一在同一商品中，又在交换中作相反运动。</p></div>
+      <div class="chapter-diagram">
+        <div class="diagram-kicker" data-edit-slot="s12-slot-4" data-slot-type="text" data-slot-label="同一商品中的两种规定" data-slot-locked-layout="true" >同一商品中的两种规定</div>
+        <div class="dual-diagram-row">
+          <div><strong data-edit-slot="s12-slot-5" data-slot-type="text" data-slot-label="使用价值" data-slot-locked-layout="true" >使用价值</strong><span data-edit-slot="s12-slot-6" data-slot-type="text" data-slot-label="自然属性 · 满足需要 · 在消费中实现" data-slot-locked-layout="true" >自然属性 · 满足需要 · 在消费中实现</span></div>
+          <b>↔</b>
+          <div><strong data-edit-slot="s12-slot-7" data-slot-type="text" data-slot-label="价值" data-slot-locked-layout="true" >价值</strong><span data-edit-slot="s12-slot-8" data-slot-type="text" data-slot-label="社会属性 · 凝结劳动 · 在交换中实现" data-slot-locked-layout="true" >社会属性 · 凝结劳动 · 在交换中实现</span></div>
+        </div>
+        <p class="chapter-diagram-note" data-edit-slot="s12-slot-9" data-slot-type="text" data-slot-label="商品必须同时具备二者：没有使用价值，价值无从承担；不经过交换，价值也不能实现。" data-slot-locked-layout="true" >商品必须同时具备二者：没有使用价值，价值无从承担；不经过交换，价值也不能实现。</p>
+      </div>
+    </div><div class="chapter-map">
+      <div><strong data-edit-slot="s12-slot-10" data-slot-type="text" data-slot-label="自然属性 → 使用价值" data-slot-locked-layout="true" >自然属性 → 使用价值</strong><span data-edit-slot="s12-slot-11" data-slot-type="text" data-slot-label="回答商品“有什么用”；由物的自然属性决定，在消费中实现，并构成价值的物质承担者。" data-slot-locked-layout="true" >回答商品“有什么用”；由物的自然属性决定，在消费中实现，并构成价值的物质承担者。</span></div>
+      <div><strong data-edit-slot="s12-slot-12" data-slot-type="text" data-slot-label="数量比例 → 交换价值" data-slot-locked-layout="true" >数量比例 → 交换价值</strong><span data-edit-slot="s12-slot-13" data-slot-type="text" data-slot-label="回答不同使用价值“怎样交换”；它表现为一定数量比例，是价值的外在表现形式。" data-slot-locked-layout="true" >回答不同使用价值“怎样交换”；它表现为一定数量比例，是价值的外在表现形式。</span></div>
+      <div><strong data-edit-slot="s12-slot-14" data-slot-type="text" data-slot-label="社会内容 → 价值" data-slot-locked-layout="true" >社会内容 → 价值</strong><span data-edit-slot="s12-slot-15" data-slot-type="text" data-slot-label="回答性质不同的商品“为什么可以比较”；其实体是无差别一般人类劳动的凝结。" data-slot-locked-layout="true" >回答性质不同的商品“为什么可以比较”；其实体是无差别一般人类劳动的凝结。</span></div>
     </div></div>
   
-  <div class="pagenum" data-edit-slot="s12-slot-10" data-slot-type="metric" data-slot-label="13 / 48" data-slot-locked-layout="true" >13 / 48</div>
+  <div class="pagenum" data-edit-slot="s12-slot-16" data-slot-type="metric" data-slot-label="13 / 48" data-slot-locked-layout="true" >13 / 48</div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
 <section class="slide hairlines course-slide" id="slide-13" data-template-slide-index="14">
@@ -2415,14 +2444,25 @@ img, .image-container {
   <div class="pagenum" data-edit-slot="s38-slot-3" data-slot-type="metric" data-slot-label="36 / 48" data-slot-locked-layout="true" >36 / 48</div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide hairlines course-slide chapter-slide" id="slide-36" data-template-slide-index="37">
-  <div class="course-inner"><div class="chapter-num" data-edit-slot="s39-slot-1" data-slot-type="text" data-slot-label="04" data-slot-locked-layout="true" >04</div><h2 class="chapter-title" data-edit-slot="s39-slot-2" data-slot-type="text" data-slot-label="商品价值量怎样形成社会尺度" data-slot-locked-layout="true" >商品价值量怎样形成社会尺度</h2><p class="chapter-lede" data-edit-slot="s39-slot-3" data-slot-type="text" data-slot-label="如果每个生产者都按自己的实际耗时决定价值，效率低的人反而会让商品“更有价值”。商品交换因此需要一个社会统一尺度。" data-slot-locked-layout="true" >如果每个生产者都按自己的实际耗时决定价值，效率低的人反而会让商品“更有价值”。商品交换因此需要一个社会统一尺度。</p><div class="chapter-map">
-      <div><strong data-edit-slot="s39-slot-4" data-slot-type="text" data-slot-label="计量什么" data-slot-locked-layout="true" >计量什么</strong><span data-edit-slot="s39-slot-5" data-slot-type="text" data-slot-label="价值量是凝结在商品中的一般人类劳动量，通常用劳动持续时间计量。" data-slot-locked-layout="true" >价值量是凝结在商品中的一般人类劳动量，通常用劳动持续时间计量。</span></div>
-      <div><strong data-edit-slot="s39-slot-6" data-slot-type="text" data-slot-label="谁来决定" data-slot-locked-layout="true" >谁来决定</strong><span data-edit-slot="s39-slot-7" data-slot-type="text" data-slot-label="不是任何个别耗时，而是现有正常条件下的社会必要劳动时间。" data-slot-locked-layout="true" >不是任何个别耗时，而是现有正常条件下的社会必要劳动时间。</span></div>
-      <div><strong data-edit-slot="s39-slot-8" data-slot-type="text" data-slot-label="怎样变化" data-slot-locked-layout="true" >怎样变化</strong><span data-edit-slot="s39-slot-9" data-slot-type="text" data-slot-label="劳动生产率改变单位商品所需时间，从而使单位商品价值量发生反向变化。" data-slot-locked-layout="true" >劳动生产率改变单位商品所需时间，从而使单位商品价值量发生反向变化。</span></div>
+<section class="slide hairlines course-slide chapter-slide chapter-balanced" id="slide-36" data-template-slide-index="37">
+  <div class="course-inner"><div class="chapter-balanced-head">
+      <div class="chapter-balanced-copy"><div class="chapter-num" data-edit-slot="s39-slot-1" data-slot-type="text" data-slot-label="04" data-slot-locked-layout="true" >04</div><h2 class="chapter-title" data-edit-slot="s39-slot-2" data-slot-type="text" data-slot-label="商品价值量怎样形成社会尺度" data-slot-locked-layout="true" >商品价值量怎样形成社会尺度</h2><p class="chapter-lede" data-edit-slot="s39-slot-3" data-slot-type="text" data-slot-label="如果每个生产者都按自己的实际耗时决定价值，效率低的人反而会让商品“更有价值”。商品交换因此需要一个社会统一尺度。" data-slot-locked-layout="true" >如果每个生产者都按自己的实际耗时决定价值，效率低的人反而会让商品“更有价值”。商品交换因此需要一个社会统一尺度。</p></div>
+      <div class="chapter-diagram">
+        <div class="diagram-kicker" data-edit-slot="s39-slot-4" data-slot-type="text" data-slot-label="从个别耗时到社会尺度" data-slot-locked-layout="true" >从个别耗时到社会尺度</div>
+        <div class="metric-flow">
+          <div><span data-edit-slot="s39-slot-5" data-slot-type="text" data-slot-label="各生产者的个别劳动时间" data-slot-locked-layout="true" >各生产者的<br><strong>个别劳动时间</strong></span></div><b>→</b>
+          <div><span data-edit-slot="s39-slot-6" data-slot-type="text" data-slot-label="社会正常生产条件平均熟练程度与劳动强度" data-slot-locked-layout="true" >社会正常生产条件<br>平均熟练程度与劳动强度</span></div><b>→</b>
+          <div><span data-edit-slot="s39-slot-7" data-slot-type="text" data-slot-label="形成统一的社会必要劳动时间" data-slot-locked-layout="true" >形成统一的<br><strong>社会必要劳动时间</strong></span></div>
+        </div>
+        <p class="chapter-diagram-note" data-edit-slot="s39-slot-8" data-slot-type="text" data-slot-label="劳动生产率提高，单位商品所需社会必要劳动时间减少，单位商品价值量相应降低。" data-slot-locked-layout="true" >劳动生产率提高，单位商品所需社会必要劳动时间减少，单位商品价值量相应降低。</p>
+      </div>
+    </div><div class="chapter-map">
+      <div><strong data-edit-slot="s39-slot-9" data-slot-type="text" data-slot-label="计量什么" data-slot-locked-layout="true" >计量什么</strong><span data-edit-slot="s39-slot-10" data-slot-type="text" data-slot-label="价值量是凝结在商品中的一般人类劳动量；劳动持续时间是计量劳动量的通常尺度。" data-slot-locked-layout="true" >价值量是凝结在商品中的一般人类劳动量；劳动持续时间是计量劳动量的通常尺度。</span></div>
+      <div><strong data-edit-slot="s39-slot-11" data-slot-type="text" data-slot-label="谁来决定" data-slot-locked-layout="true" >谁来决定</strong><span data-edit-slot="s39-slot-12" data-slot-type="text" data-slot-label="决定价值量的不是某个生产者的个别耗时，而是社会正常条件下的社会必要劳动时间。" data-slot-locked-layout="true" >决定价值量的不是某个生产者的个别耗时，而是社会正常条件下的社会必要劳动时间。</span></div>
+      <div><strong data-edit-slot="s39-slot-13" data-slot-type="text" data-slot-label="怎样变化" data-slot-locked-layout="true" >怎样变化</strong><span data-edit-slot="s39-slot-14" data-slot-type="text" data-slot-label="劳动生产率改变单位商品所需劳动时间，因此单位商品价值量与劳动生产率成反比。" data-slot-locked-layout="true" >劳动生产率改变单位商品所需劳动时间，因此单位商品价值量与劳动生产率成反比。</span></div>
     </div></div>
   
-  <div class="pagenum" data-edit-slot="s39-slot-10" data-slot-type="metric" data-slot-label="37 / 48" data-slot-locked-layout="true" >37 / 48</div>
+  <div class="pagenum" data-edit-slot="s39-slot-15" data-slot-type="metric" data-slot-label="37 / 48" data-slot-locked-layout="true" >37 / 48</div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
 <section class="slide hairlines course-slide" id="slide-37" data-template-slide-index="38">
