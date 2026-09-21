@@ -994,6 +994,15 @@ body.fused-deck .panel ul { margin-top: .55rem; }
 .comparison-table .head { background:var(--ink); color:#fff; font-weight:900; }
 .comparison-table .row { font-weight:900; color:var(--red); }
 .comparison-table.history-table > div { padding:clamp(.38rem,.62vw,.66rem); line-height:1.25; }
+.comparison-table.law-scope-table { grid-template-columns:.58fr 1fr .92fr 1.5fr; }
+.comparison-table.law-scope-table > div {
+  padding:clamp(.34rem,.52vw,.56rem);
+  font-size:clamp(.95rem,1.12vw,1.34rem);
+  line-height:1.28;
+}
+.comparison-table.law-scope-table > div:nth-child(4n) { background:rgba(217,45,32,.055); }
+.law-scope-table .scope-key { display:block; margin-bottom:.14rem; font-weight:900; color:var(--ink); }
+.law-scope-table .scope-example b { color:var(--red); }
 
 .case-flow { display:grid; grid-template-columns:repeat(5,1fr); border-top:3px solid currentColor; border-bottom:3px solid currentColor; }
 .case-flow > div { padding:clamp(.75rem,1vw,1.05rem); min-height:22vh; }
@@ -1628,20 +1637,29 @@ body.fused-deck .panel ul { margin-top: .55rem; }
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
 </section>
-<section class="slide" id="slide-19" data-slide-title="经济规律的三种历史范围" data-teach-minutes="2.5" data-source="P15">
+<section class="slide" id="slide-19" data-slide-title="三类经济规律：适用条件、区别与案例" data-teach-minutes="4" data-source="P15">
   <div class="slide-content">
     <header class="topline reveal">
       <span class="lesson-tag" data-edit-slot="s19-lesson">导论 · 研究对象、规律与方法</span>
     </header>
     <main class="stage">
-          <h2 class="page-theme reveal">经济规律为什么具有不同的历史适用范围？</h2>
-          <div class="comparison-table history-table reveal">
-            <div class="head">类型</div><div class="head">适用条件</div><div class="head">举例</div>
-            <div class="row">一般规律</div><div>贯穿人类社会发展始终，在一切社会经济形态中起作用。</div><div>生产关系一定要适合生产力状况、上层建筑一定要适合经济基础状况；它们反映社会发展的普遍矛盾运动。</div>
-            <div class="row">共有规律</div><div>在若干社会经济形态中，或在共同经济条件存在时起作用。</div><div>价值规律存在于商品经济；社会生产按比例发展的要求存在于社会化大生产，并随具体制度呈现不同实现形式。</div>
-            <div class="row">特有规律</div><div>由特定社会经济形态的特殊生产关系产生，随该生产关系存在而发生作用。</div><div>剩余价值规律、资本积累规律同资本主义生产关系相联系；按劳分配规律同社会主义生产关系相联系。</div>
+          <h2 class="page-theme reveal">三类规律的差别，在于它们依赖的经济条件有多普遍</h2>
+          <div class="comparison-table law-scope-table reveal">
+            <div class="head">类型</div><div class="head">什么时候起作用</div><div class="head">主要区别</div><div class="head">一看就懂的案例</div>
+            <div class="row">一般规律</div>
+            <div><span class="scope-key">只要存在人类物质生产</span>不论社会制度怎样变化，都要处理生产力与生产关系、经济基础与上层建筑的适应问题。</div>
+            <div><span class="scope-key">跨越全部经济形态</span>不依赖某一种制度；制度不同，只会改变规律的实现形式。</div>
+            <div class="scope-example"><b>农村改革：</b>人民公社体制下激励不足，家庭联产承包责任制调整了生产关系，调动积极性并释放农业生产力。</div>
+            <div class="row">共有规律</div>
+            <div><span class="scope-key">几个经济形态共享某种条件</span>例如存在商品生产和交换，价值规律就会发生作用；共同条件消失，规律也不再适用。</div>
+            <div><span class="scope-key">跨越若干形态，但不是永恒存在</span>适用范围由“共同经济条件”决定，而不是由形态数量决定。</div>
+            <div class="scope-example"><b>菜价与种植：</b>天气减产使蔬菜供给减少、价格上涨；较高价格吸引种植户下一季扩大种植，价值规律通过价格调节资源。</div>
+            <div class="row">特有规律</div>
+            <div><span class="scope-key">一种特定生产关系存在</span>由该社会经济形态的特殊关系产生；这种关系退出历史舞台，规律的作用基础也随之消失。</div>
+            <div><span class="scope-key">只属于特定经济形态</span>不能把一种制度的特有规律直接套用到另一种制度。</div>
+            <div class="scope-example"><b>剩余价值：</b>资本主义工厂中，工人一天创造的新增价值超过工资，差额归资本所有；它以资本雇佣劳动关系为前提。</div>
           </div>
-          <p class="focus-strip fragment"><b>判断方法：</b>说明一条规律时，必须同时说明它的社会经济条件、历史范围和具体实现形式。 <span class="answer-location">P15</span></p></main>
+          <p class="focus-strip fragment"><b>疑问解答：</b>“贯穿发展始终”＝任何社会只要进行物质生产就存在；“若干经济形态”＝只有几个形态共享某种条件时才存在。前者不随形态更替而消失，后者会随共同条件的消失而退出。 <span class="answer-location">P15</span></p></main>
     <footer class="deck-footer"><span data-edit-slot="s19-footer">政治经济学 · 导论</span><span class="page-no">20 / 26</span></footer>
   </div>
   <div class="slide-edit-layer" aria-hidden="true"></div>
