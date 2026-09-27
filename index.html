@@ -3,33 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>政治经济学｜课堂教学课件</title>
+  <title>政治经济学｜课程课件总目录</title>
   <style>
     :root{--paper:#f5f2ea;--ink:#11100e;--red:#d92d20;--muted:#68645d;--line:rgba(17,16,14,.18)}
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
-    main{min-height:100vh;padding:clamp(2rem,7vw,7rem);display:grid;align-content:center;gap:clamp(1.5rem,4vw,4rem);background:linear-gradient(rgba(17,16,14,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(17,16,14,.045) 1px,transparent 1px);background-size:72px 72px}
+    main{min-height:100vh;padding:clamp(2rem,6vw,6rem);display:grid;align-content:center;gap:clamp(1.5rem,3vw,3rem);background:linear-gradient(rgba(17,16,14,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(17,16,14,.045) 1px,transparent 1px);background-size:72px 72px}
     header{border-left:clamp(8px,1vw,14px) solid var(--red);padding-left:clamp(1rem,2vw,2rem)}
     h1{font-size:clamp(2.5rem,6vw,6.5rem);line-height:1;margin:0;letter-spacing:-.055em}p{font-size:clamp(1rem,1.5vw,1.35rem);color:var(--muted);margin:.8rem 0 0}
-    nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+    .catalog{display:grid;gap:1.15rem}.group-title{display:flex;align-items:baseline;gap:.8rem;margin:0;font-size:clamp(1.25rem,2vw,1.8rem)}.group-title span{font-size:.85rem;color:var(--muted);font-weight:400}
+    nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
     a{display:flex;min-height:clamp(190px,30vh,320px);padding:clamp(1.2rem,2.3vw,2.4rem);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);color:inherit;text-decoration:none;flex-direction:column;justify-content:flex-start;background:rgba(255,255,255,.48)}
     a:hover,a:focus-visible{background:var(--ink);color:#fff;outline:none}a:hover small,a:focus-visible small{color:#ffb5ad}
     strong{font-size:clamp(1.3rem,2.2vw,2.25rem);line-height:1.2;margin:auto 0}small{color:var(--red);font-weight:800;font-size:clamp(.8rem,1vw,1rem)}
     footer{font-size:.9rem;color:var(--muted)}
-    @media(max-width:850px){nav{grid-template-columns:1fr}a{min-height:150px}}
+    @media(max-width:1000px){nav{grid-template-columns:1fr}a{min-height:150px}}
   </style>
 </head>
 <body>
   <main>
-    <header><h1>政治经济学</h1><p>大学本科课堂课件 · 单文件可编辑版本</p></header>
-    <nav aria-label="课程课件">
-      <a href="lecture01-v6.html"><small>导论.第一讲</small><strong>我们究竟在研究什么？</strong></a>
-      <a href="lecture02.html"><small>导论.第二讲</small><strong>研究什么、为什么这样研究、怎样研究？</strong></a>
-      <a href="lecture03-compact.html"><small>导论.第三讲</small><strong>理论为什么必须在实践中不断发展？</strong></a>
-      <a href="lecture04.html"><small>第一章 商品</small><strong>商品：从有用的产品到社会关系</strong></a>
-      <a href="lecture05.html"><small>第二章 货币</small><strong>货币：商品怎样取得共同的价值语言</strong></a>
-      <a href="lecture06.html"><small>第三章 市场经济和价值规律</small><strong>市场怎样配置资源，又有哪些边界？</strong></a>
-    </nav>
-    <footer>方向键、空格或滚轮翻页；按 E 进入浏览器内编辑模式。</footer>
+    <header><h1>政治经济学</h1><p>课程课件总目录 · 已更新至第三章</p></header>
+    <section class="catalog" aria-labelledby="intro-title">
+      <h2 class="group-title" id="intro-title">导论 <span>研究对象、理论发展与中国实践</span></h2>
+      <nav aria-label="导论课件">
+        <a href="lecture01-v6.html"><small>第1讲</small><strong>我们究竟在研究什么？</strong></a>
+        <a href="lecture02.html"><small>第2讲</small><strong>研究什么、为什么这样研究、怎样研究？</strong></a>
+        <a href="lecture03-compact.html"><small>第3讲</small><strong>理论为什么必须在实践中不断发展？</strong></a>
+      </nav>
+    </section>
+    <section class="catalog" aria-labelledby="part-one-title">
+      <h2 class="group-title" id="part-one-title">第一篇 <span>商品、货币与市场经济</span></h2>
+      <nav aria-label="第一篇课件">
+        <a href="lecture04.html"><small>第一章 · 第4讲</small><strong>商品：从有用的产品到社会关系</strong></a>
+        <a href="lecture05.html"><small>第二章 · 第5讲</small><strong>货币：商品怎样取得共同的价值语言</strong></a>
+        <a href="lecture06.html"><small>第三章 · 第6讲</small><strong>市场怎样配置资源，又有哪些边界？</strong></a>
+      </nav>
+    </section>
+    <footer>点击课程卡片进入课件；课件内可使用方向键、空格或滚轮翻页。</footer>
   </main>
 </body>
 </html>
